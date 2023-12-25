@@ -1,0 +1,28 @@
+{% extends "base_page.html" %}
+
+{% load static %}
+
+{% block headextra %}
+{% endblock headextra %}
+
+{% block body %}
+    <div id="animation">
+        <style>
+            me {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #000000;
+                filter: blur(10px); 
+                /* opacity: 0.6; */
+            }
+        </style>
+    </div>
+    <script type="module" src="{% static 'js/particles/main.js' %}"></script>
+{% endblock body %}

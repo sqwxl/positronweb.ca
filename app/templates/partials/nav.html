@@ -1,0 +1,18 @@
+{% load static %}
+
+<nav class="" preload="mouseover">
+    <menu class="">
+        <li>
+            <a href="{% url 'index' %}">{% translate "Home" %}</a>
+        </li>
+        <li>
+            <a href="{% url 'services' %}">{% translate "Services" %}</a>
+        </li>
+        <li>
+            <a href="{% url 'contact' %}">{% translate "Contact" %}</a>
+        </li>
+        <li>
+            <a href="{% url 'about' %}">{% translate "About" %}</a>
+        </li>
+    </menu>
+</nav>
