@@ -83,3 +83,16 @@ export function getBitSize(number) {
 export function getLog2(value) {
   return Math.ceil(Math.log2(value));
 }
+
+/**
+ * Returns the side length of a cell given a cutoff distance.
+ * Cells are square and the diagonal is equal to the cutoff distance.
+ *
+ * @param cutoff_sq the cutoff distance squared
+ * @return the side length of a cell
+ */
+export function cell_side_from_cutoff(cutoff_sq) {
+  // s * s * 2 = cutoff * cutoff
+  // s = sqrt(cutoff * cutoff / 2)
+  return Math.sqrt(cutoff_sq / 2);
+}

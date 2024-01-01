@@ -3,11 +3,13 @@ import {
   Graphics,
   Rectangle,
   RenderTexture,
+  Sprite,
   TilingSprite,
 } from "../pixi.mjs";
 import { Vec2 } from "./vec2.js";
 import { Grid } from "./grid.js";
 import { Particle } from "./particle.js";
+import { cell_side_from_cutoff } from "./utils.js";
 
 export class Engine {
   constructor(app, settings) {
@@ -22,11 +24,16 @@ export class Engine {
       height: this.H,
     });
 
-    this.sprite = new TilingSprite(
-      this.renderTexture,
-      app.screen.width,
-      app.screen.height,
-    );
+    if (this.settings.TILE) {
+      this.sprite = new TilingSprite(
+        this.renderTexture,
+        app.screen.width,
+        app.screen.height,
+      );
+    } else {
+      this.sprite = new Sprite(this.renderTexture, this.W, this.H);
+    }
+
     this.app.stage.addChild(this.sprite);
 
     this.canvas = new Graphics();
@@ -49,18 +56,26 @@ export class Engine {
           ),
       );
 
+    const cell_side = cell_side_from_cutoff(this.settings.CUTOFF2);
+
     this.grid = new Grid(
-      this.settings.GRID_ROWS,
-      this.settings.GRID_COLS,
+      ~~(this.H / cell_side),
+      ~~(this.W / cell_side),
       this.W,
       this.H,
     );
 
     this.pairs = new Set();
+
     if (this.settings.APPLY_FILTERS) {
       const colorFilter = new ColorMatrixFilter();
-      colorFilter.lsd(true);
-      this.app.stage.filterArea = new Rectangle(0, 0, this.W, this.H);
+      colorFilter.lsd(false);
+      this.app.stage.filterArea = new Rectangle(
+        0,
+        0,
+        app.screen.width,
+        app.screen.height,
+      );
       this.app.stage.filters = [colorFilter];
     }
 
@@ -71,55 +86,50 @@ export class Engine {
 
   run = (dt) => {
     if (this.paused) return;
+    const _dt = dt * this.settings.SIM_SPEED;
     this.pairs.clear();
 
     this.grid.update(this.particles);
 
     // first pass: compute forces
-    for (const cell0 of this.grid.cells) {
-      if (!cell0) continue;
-      if (this.settings.DRAW_BOXES) {
-        cell0.draw(this.canvas);
-      }
-      const [i, j] = [cell0.i, cell0.j];
-      for (const p0 of cell0.particles) {
-        for (const dy of [-1, 0, 1]) {
-          for (const dx of [-1, 0, 1]) {
-            let [ii, jj] = [i + dy, j + dx];
+    // loop through "live" cells
+    for (let i = 1; i < this.grid.rows - 1; i++) {
+      for (let j = 1; j < this.grid.columns - 1; j++) {
+        const cell0 = this.grid.cells.getValue(i, j);
+        if (this.settings.DRAW_BOXES) {
+          cell0.draw(this.canvas);
+        }
+        for (const p0 of cell0.particles) {
+          // loop through neighboring cells
+          for (let ii = i - 1; ii <= i + 1; ii++) {
+            for (let jj = j - 1; jj <= j + 1; jj++) {
+              const cell1 = this.grid.cells.getValue(ii, jj);
 
-            let [ghost_x, ghost_y] = [0, 0];
-            if (ii < 0) {
-              ii = this.grid.rows - 1;
-              ghost_y = -1;
-            } else if (ii >= this.grid.rows) {
-              ii = 0;
-              ghost_y = 1;
-            }
-            if (jj < 0) {
-              jj = this.grid.cols - 1;
-              ghost_x = -1;
-            } else if (jj >= this.grid.cols) {
-              jj = 0;
-              ghost_x = 1;
-            }
+              for (const p1 of cell1.particles) {
+                if (p0 === p1) continue;
 
-            const live_cell = ghost_x === 0 && ghost_y === 0;
-
-            const cell1 = this.grid.cells.getValue(ii, jj);
-            for (const p1 of cell1.particles) {
-              if (p0 === p1) continue;
-              if (live_cell) {
                 const pair_id =
                   p0.id < p1.id ? `${p0.id}-${p1.id}` : `${p1.id}-${p0.id}`;
+
                 if (this.pairs.has(pair_id)) continue;
+
                 this.pairs.add(pair_id);
+
+                const dv = this.get_dv(p0, p1, _dt);
+
+                if (!dv) continue;
+
+                this.accelerate(p0, dv);
+
+                // only apply force to p1 if it's not a ghost particle
+                if (
+                  ii > 0 &&
+                  ii < this.grid.rows - 1 &&
+                  jj > 0 &&
+                  jj < this.grid.columns - 1
+                )
+                  this.accelerate(p1, dv.mul(-1));
               }
-
-              const f = this.compute_force_vec(p0, p1, ghost_x, ghost_y);
-              if (!f) continue;
-
-              this.apply_force(p0, f);
-              if (live_cell) this.apply_force(p1, f.mul(-1));
             }
           }
         }
@@ -128,7 +138,7 @@ export class Engine {
 
     // second pass: move particles
     this.particles.forEach((particle) => {
-      this.tick(particle, dt * this.settings.SIM_SPEED);
+      this.tick(particle, dt);
 
       // boundary conditions
       if (this.settings.BOUNDARY_MODE === "bounce") this.bounce(particle);
@@ -149,9 +159,9 @@ export class Engine {
     this.canvas.clear();
   };
 
-  compute_force_vec(p0, p1, ghost_x, ghost_y) {
-    const [x1, y1] = [p1.x + ghost_x * this.W, p1.y + ghost_y * this.H];
-    const d = p0.p.sub(x1, y1);
+  get_dv(p0, p1, dt) {
+    const d = p0.p.sub(p1.p);
+
     const r2 = d.mag_sq();
 
     if (r2 === 0 || r2 > this.settings.CUTOFF2) return;
@@ -165,14 +175,15 @@ export class Engine {
     }
 
     if (this.settings.DRAW_FORCES) {
-      this.draw_force(f, p0, x1, y1);
+      this.draw_force(f, p0, p1);
     }
 
-    return d.mul(f); // TODO consider normalizing d
+    return d.normalize().mul(f).mul(dt);
   }
 
-  apply_force(p, f) {
-    p.v = p.v.add(f).mul(this.settings.FRICTION).cap(this.settings.C);
+  accelerate(p, dv) {
+    p.v = p.v.add(dv);
+    p.v = p.v.mul(this.settings.FRICTION).cap(this.settings.C);
   }
 
   tick(p, t) {
@@ -180,14 +191,14 @@ export class Engine {
 
     p.move(t);
 
-    const s = p.v.mag_sq() / this.settings.C2;
+    const s = p.v.mag_sq() / this.settings.C / this.settings.C;
 
     this.canvas.lineStyle({
       width: this.settings.PARTICLE_SIZE + 3 * s,
       color: {
-        h: this.settings.PARTICLE_HUE + 45 * p.charge,
-        s: 70 + 30 * s,
-        l: 70 + 30 * s,
+        h: this.settings.HUE + this.settings.HUE_SPREAD * p.charge,
+        s: 100,
+        l: 50,
       },
       alpha: 1,
       cap: "round",
@@ -221,17 +232,13 @@ export class Engine {
     if (particle.y > this.H) particle.y = particle.y % this.H;
   }
 
-  draw_force(f, p0, x1, y1) {
-    this.canvas.lineStyle(
-      1,
-      {
-        h: this.settings.FORCE_HUE - 45 * Math.sign(f),
-        s: 100,
-        l: 20,
-      },
-      1,
-    );
+  draw_force(f, p0, p1) {
+    this.canvas.lineStyle(2, {
+      h: this.settings.HUE - this.settings.HUE_SPREAD * Math.sign(f),
+      s: 100,
+      l: 8,
+    });
     this.canvas.moveTo(p0.x, p0.y);
-    this.canvas.lineTo(x1, y1);
+    this.canvas.lineTo(p1.x, p1.y);
   }
 }

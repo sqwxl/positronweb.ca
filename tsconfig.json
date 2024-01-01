@@ -11,7 +11,6 @@
   "display": "Recommended",
   "include": [
     "static/js/*",
-    "static/js/particles/grid.js",
-    "static/js/particles/engine.js"
+    "static/js/particles/*",
   ]
 }

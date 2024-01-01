@@ -65,9 +65,11 @@
           hx-ext="preload"
           hx-boost="true">
         <style>
-            me {
-            }
+            me { }
         </style>
+        <header>
+            {% include "partials/header.html" %}
+        </header>
 
         {% block body %}
         {% endblock body %}

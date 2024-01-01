@@ -34,10 +34,6 @@ export class Vec2 {
     return this.div(this.mag());
   }
 
-  clone() {
-    return new Vec2(this.x, this.y);
-  }
-
   abs() {
     return new Vec2(Math.abs(this.x), Math.abs(this.y));
   }
@@ -49,5 +45,9 @@ export class Vec2 {
       return this.mul(max2 / mag2);
     }
     return this;
+  }
+
+  static clone(vec) {
+    return new Vec2(vec.x, vec.y);
   }
 }

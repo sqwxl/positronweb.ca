@@ -1,3 +1,5 @@
+import { Vec2 } from "./vec2.js";
+
 export class Particle {
   constructor(p, v, charge = null) {
     this.p = p;
@@ -15,6 +17,7 @@ export class Particle {
   }
 
   set x(value) {
+    if (isNaN(value)) throw new Error("NaN");
     this.p.x = value;
   }
 
@@ -24,5 +27,13 @@ export class Particle {
 
   set y(value) {
     this.p.y = value;
+  }
+
+  static clone(particle) {
+    return new Particle(
+      Vec2.clone(particle.p),
+      Vec2.clone(particle.v),
+      particle.charge,
+    );
   }
 }
