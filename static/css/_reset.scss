@@ -15,6 +15,15 @@ html {
   box-sizing: inherit;
 }
 
+h1,
+h2,
+h3,
+p {
+  + * {
+    margin-top: 1rem;
+  }
+}
+
 hr {
   height: 0;
   color: inherit;

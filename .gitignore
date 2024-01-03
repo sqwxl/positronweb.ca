@@ -1,11 +1,16 @@
 
 # Devenv
-.devenv*
+.devenv/
 devenv.local.nix
+.devenv.flake.nix
 
 # direnv
-.direnv
+.direnv/
 
 # pre-commit
 .pre-commit-config.yaml
 
+# artifacts
+_static/
+.ruff_cache/
+__pycache__/

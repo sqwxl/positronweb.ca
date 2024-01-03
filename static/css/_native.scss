@@ -1,29 +1,27 @@
-
-:root {}
+:root {
+}
 html {
-    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-      "Apple Color Emoji", "Segoe UI Emoji";
-
-    background: #fff;
-    color: #000;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 body {
   line-height: 1.5;
   display: grid;
-  grid-template-columns: 1fr min(45rm, 90%) 1fr;
+  grid-template-columns: 1fr min(45rem, 90%) 1fr;
+  margin: 0;
 }
-
-* + * {
-  margin-top: 1rem;
-}
-
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Content sectioning
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: bold;
 }
 h1 {
@@ -35,166 +33,266 @@ h2 {
 h3 {
   font-size: 1.25rem;
 }
-h4 {}
-h5 {}
-h6 {}
+h4 {
+}
+h5 {
+}
+h6 {
+}
 
-header {}
+header {
+}
 
-nav {}
-nav ul, nav ol {}
-nav li {}
-nav a {}
-nav a:visited {}
-nav a:hover {}
-nav a:active {}
+nav {
+}
+nav ul,
+nav ol {
+}
+nav li {
+}
+nav a {
+}
+nav a:visited {
+}
+nav a:hover {
+}
+nav a:active {
+}
 
-main {}
+main {
+}
 
-article {}
+article {
+}
 
-section {}
+section {
+}
 
-aside {}
+aside {
+}
 
-search {}
+search {
+}
 
-footer {}
+footer {
+}
 
-address {}
-
+address {
+}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Text block content
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 /* Overall styling, e.g. vertical spacing */
-p, ol, ul, pre, blockquote, figure, hr, dl {}
+p,
+ol,
+ul,
+pre,
+blockquote,
+figure,
+hr,
+dl {
+}
 
-p {}
+p {
+}
 
-ol, ul {}
-ol {}
-ul {}
-li {}
-ol ol, ol ul, ul ul, ul ol {}
-li li {}
+ol,
+ul {
+}
+ol {
+}
+ul {
+}
+li {
+}
+ol ol,
+ol ul,
+ul ul,
+ul ol {
+}
+li li {
+}
 
-pre {}
-pre code {}
-pre samp {}
+pre {
+}
+pre code {
+}
+pre samp {
+}
 
-blockquote {}
+blockquote {
+}
 
-figure {}
-figcaption {}
+figure {
+}
+figcaption {
+}
 
-hr {}
+hr {
+}
 
-dl {}
-dt {}
-dd {}
-
+dl {
+}
+dt {
+}
+dd {
+}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Inline text semantics
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-a {}
-a:visited {}
-a:hover {}
-a:active {}
+a {
+}
+a:visited {
+}
+a:hover {
+}
+a:active {
+}
 
-strong {}
-b {}
+strong {
+}
+b {
+}
 
-em {}
-i {}
+em {
+}
+i {
+}
 
-q {}
-cite {}
+q {
+}
+cite {
+}
 
-s {}
+s {
+}
 
-mark {}
+mark {
+}
 
 /* If you specify a font size, consider using the `em` unit so that it works
 universally, e.g. for both `h1 small` and `p small` */
-small {}
-sub {}
-sup {}
+small {
+}
+sub {
+}
+sup {
+}
 
-code {}
+code {
+}
 
-dfn {}
-abbr {}
-abbr[title] {}
+dfn {
+}
+abbr {
+}
+abbr[title] {
+}
 
-var {}
-kbd {}
-kbd kbd {}
-samp {}
+var {
+}
+kbd {
+}
+kbd kbd {
+}
+samp {
+}
 
-u {}
+u {
+}
 
-data {}
-time {}
-
+data {
+}
+time {
+}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Demarcating edits
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-del {}
-ins {}
-
+del {
+}
+ins {
+}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Embedded content
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-img {}
-svg {}
-video {}
-canvas {}
-audio {}
-object {}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+svg {
+}
+video {
+}
+canvas {
+}
+audio {
+}
+object {
+}
 
-noscript {}
-
+noscript {
+}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Table content
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-table {}
-caption {}
-col:first-child {}
-thead {}
-tbody {}
-tfoot {}
-tr {}
-th {}
-td {}
-
+table {
+}
+caption {
+}
+col:first-child {
+}
+thead {
+}
+tbody {
+}
+tfoot {
+}
+tr {
+}
+th {
+}
+td {
+}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Forms
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-fieldset {}
-fieldset:disabled {}
-legend {}
+fieldset {
+}
+fieldset:disabled {
+}
+legend {
+}
 
-form {}
+form {
+}
 
-label {}
+label {
+}
 
-::placeholder {}
-:focus::placeholder {}
+::placeholder {
+}
+:focus::placeholder {
+}
 
 /* Overall styling, e.g. vertical spacing */
-input, textarea, select, button {}
+input,
+textarea,
+select,
+button {
+}
 
 /* `textarea` and `input` elements that share a similar look and similar styling
 capabilities */
@@ -212,60 +310,94 @@ input[type="datetime-local"],
 input[type="month"],
 input[type="week"],
 input[type="time"] {
-    border: 1px solid;
-    border-radius: 0.25rem;
+  border: 1px solid;
+  border-radius: 0.25rem;
+  width: 100%;
 }
 /* - individual styling */
-textarea {}
-input[type="text"] {}
-input[type="password"] {}
-input[type="email"] {}
-input[type="tel"] {}
-input[type="number"] {}
-input[type="search"] {}
-input[type="url"] {}
-input[type="date"] {}
-input[type="datetime-local"] {}
-input[type="month"] {}
-input[type="week"] {}
-input[type="time"] {}
+textarea {
+}
+input[type="text"] {
+}
+input[type="password"] {
+}
+input[type="email"] {
+}
+input[type="tel"] {
+}
+input[type="number"] {
+}
+input[type="search"] {
+}
+input[type="url"] {
+}
+input[type="date"] {
+}
+input[type="datetime-local"] {
+}
+input[type="month"] {
+}
+input[type="week"] {
+}
+input[type="time"] {
+}
 /* Tick boxes */
-input[type="checkbox"], input[type="radio"] {}
-input[type="checkbox"]:checked, input[type="radio"]:checked {}
-input[type="checkbox"] {}
-input[type="checkbox"]:checked {}
-input[type="radio"] {}
-input[type="radio"]:checked {}
+input[type="checkbox"],
+input[type="radio"] {
+}
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+}
+input[type="checkbox"] {
+}
+input[type="checkbox"]:checked {
+}
+input[type="radio"] {
+}
+input[type="radio"]:checked {
+}
 /* Other input fields, some with limited styling capabilities */
-input[type="file"] {}
-input[type="color"] {}
-input[type="range"] {}
+input[type="file"] {
+}
+input[type="color"] {
+}
+input[type="range"] {
+}
 
-select {}
-optgroup {}
-option {}
-option:checked {}
-datalist {}
+select {
+}
+optgroup {
+}
+option {
+}
+option:checked {
+}
+datalist {
+}
 
 button,
 input[type="submit"] {
   cursor: pointer;
   border: none;
   border-radius: 0.25rem;
-  background: skyblue;
-  padding: 0.25rem 0.5rem;
-  margin: 0.2rem;
+  background-color: var(--primary);
+  color: var(--background);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
 
   &:hover {
     background: lightblue;
   }
 
-  &:disabled {}
-  
+  &:disabled {
+  }
 }
 
-button.secondary {}
-button.secondary:disabled {}
+button.secondary {
+}
+button.secondary:disabled {
+}
 
 /* This matches forms or form elements that are invalid *and* have been
 interacted with. Note that:
@@ -277,31 +409,44 @@ Form validation error messages will appear (in capable browsers) regardless of
 this styling. You can omit 1) and 2) and still have working forms. Perfect
 example of progressive enhancement. */
 /* Applies to invalid forms */
-form.interacted:invalid {}
+form.interacted:invalid {
+}
 /* Applies to invalid form fields. You would need to repeat your declarations
 for the following three groups of selectors individually. Browsers completely
 ignore any rule that contains a selector they do not know. */
-form.interacted :invalid, form .touched:invalid {}
-:user-invalid {}
-:-moz-ui-invalid {}
+form.interacted :invalid,
+form .touched:invalid {
+}
+:user-invalid {
+}
+:-moz-ui-invalid {
+}
 
-output {}
+output {
+}
 
-progress {}
-meter {}
-
+progress {
+}
+meter {
+}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Interactive elements
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-details {}
-details[open] {}
-summary {}
-details[open] summary {}
+details {
+}
+details[open] {
+}
+summary {
+}
+details[open] summary {
+}
 
-dialog {}
-dialog::backdrop {}
+dialog {
+}
+dialog::backdrop {
+}
 
 /* Some form fields, `details`, elements with `tabindex`, and possibly other
 elements can be focussed. You should use `:focus-visible` instead of `:focus`
@@ -310,12 +455,16 @@ as follows:
 1) Set styling on focus
 2) If browser supports `:focus-visible`, revert/unset the styling from 1)
 3) If the element matches `:focus-visible`, apply the styling again */
-:focus {}
-:focus:not(:focus-visible) {}
-:focus-visible {}
+:focus {
+}
+:focus:not(:focus-visible) {
+}
+:focus-visible {
+}
 
-[inert], [inert] * {}
-
+[inert],
+[inert] * {
+}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Media queries
@@ -336,9 +485,7 @@ Media queries
 @media print {
 }
 
-
 /*
 This file evolved from Natural Selection:
 https://github.com/frontaid/natural-selection
 */
-

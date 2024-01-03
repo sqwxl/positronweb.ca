@@ -1,14 +1,34 @@
-{% load static %}
+{% load static tagline %}
 
-<div>
+<header>
     <style>
-    me>img {
-        display: block;
-        margin: 0 auto;
-        width: 15rem;
-        height: auto;
-    }
+        me {
+            grid-column: 1/-1;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: lightgrey;
+            box-shadow: 0 0px 18.3rem 13px lightgrey inset, 0 -0.3rem 0.3rem grey inset;
+        }
     </style>
-    <img src="{% static 'images/logo.svg' %}" alt="positron">
-</div>
-{% include "partials/nav.html" %}
+    <div>
+        <style>
+            me>img {
+                margin: .3rem auto 0;
+                width: 15rem;
+                height: auto;
+            }
+        </style>
+        <img src="{% static 'images/logo.svg' %}" alt="positron">
+        <p align="center">
+            <style>
+                me {
+                    margin: 0;
+                    color: var(--muted)
+                }
+            </style>
+            <small>{% tagline %}</small>
+        </p>
+    </div>
+    {% include "partials/nav.html" %}
+    {% include "partials/flash.html" %}
+</header>

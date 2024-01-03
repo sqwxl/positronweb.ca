@@ -28,6 +28,11 @@
               type="image/png"
               sizes="16x16"
               href="{% static 'images/favicon-16x16.png' %}">
+        {% compress css %}
+            <link rel="stylesheet"
+                  type="text/x-scss"
+                  href="{% static 'css/style.scss' %}">
+        {% endcompress %}
         {% if debug %}
             <script defer src="{% static 'js/htmx/htmx.js' %}"></script>
             <script defer src="{% static 'js/_hyperscript.js' %}"></script>
@@ -64,12 +69,7 @@
     <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'
           hx-ext="preload"
           hx-boost="true">
-        <style>
-            me { }
-        </style>
-        <header>
-            {% include "partials/header.html" %}
-        </header>
+        {% include "partials/header.html" %}
 
         {% block body %}
         {% endblock body %}

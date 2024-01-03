@@ -110,3 +110,5 @@ COMPRESS_FILTERS = {"css": ["compressor.filters.css_default.CssAbsoluteFilter"]}
 COMPRESS_PRECOMPILERS = [
     ("text/x-scss", "sass {infile} {outfile}"),
 ]
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"

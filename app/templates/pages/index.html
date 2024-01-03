@@ -2,5 +2,49 @@
 
 {% load static %}
 
-{% block body %}
-{% endblock body %}
+{% block header %}
+{% endblock header %}
+
+{% block content %}
+    <p>
+        {% trans "Say hello to the web how it was meant to be." %}
+    </p>
+    <h1>
+        {% trans "Simple, reliable & fast" %}
+    </h1>
+    <p>
+        {% blocktrans %}
+        At Positron, we rely on proven technologies to deliver stellar user experience.
+        This guarantees that your application will be fast, reliable and accessible for all users.
+        {% endblocktrans %}
+    </p>
+    <p>
+        <a href="TODO">{% trans "Learn more" %}</a>
+    </p>
+    <h2>
+        {% trans "Why choose Positron?" %}
+    </h2>
+    <p>
+        {% blocktrans %}
+            We offer custom solutions for your personal or business needs. We can help you with your website, web application, mobile application, or any other software project you have in mind.
+        {% endblocktrans %}
+        <br>
+    </p>
+    <p>
+        Ready to get started?
+        <button type="button"
+                hx-target="body"
+                hx-get="{% url 'project' %}"
+                hx-push-url="true">
+            {% trans "Tell us about your project!" %}
+        </button>
+    </p>
+    <h2>
+        {% trans "Who we are" %}
+    </h2>
+    <p>
+        {% blocktrans %}
+            We are a small team of experienced developers. We are passionate about what we do and strive to offer only the best solutions to our clients.
+        {% endblocktrans %}
+    </p>
+{% endblock content %}

@@ -1,7 +1,35 @@
 {% load static %}
 
-<nav class="" preload="mouseover">
-    <menu class="">
+<nav preload="mouseover">
+    <style>
+        me {
+            margin: 1rem auto 0;
+            max-width: 45rem;
+
+            & menu {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+
+            & a {
+                text-decoration: none;
+                color: #000;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: #000;
+                }
+            }
+        }
+    </style>
+    <menu>
         <li>
             <a href="{% url 'index' %}">{% translate "Home" %}</a>
         </li>

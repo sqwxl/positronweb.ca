@@ -1,2 +1,11 @@
-// fonts
+// colors
 
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --muted: #6c757d;
+  --primary: #1d4289;
+  --background: #ffffff;
+}
+
+[data-theme="dark"] {
+}
