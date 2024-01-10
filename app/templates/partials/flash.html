@@ -1,5 +1,18 @@
 {% if messages %}
-    <ul class="messagelist">
+    <ul class="messagelist"
+        x-data="{open: true}"
+        x-show="open"
+        x-init="setTimeout(() => open = false, 2000)"
+        x-transition.duration.500ms>
+        <style>
+            me {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                margin: 0;
+            }
+        </style>
         {% for message in messages %}
             <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>
                 {{ message }}

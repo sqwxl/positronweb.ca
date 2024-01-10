@@ -1,6 +1,9 @@
-from django.shortcuts import render
-from django.utils.translation import gettext_lazy as _
+from django.contrib import messages
+from django.conf import settings
 from django.core import mail
+from django.shortcuts import HttpResponseRedirect, render
+from django.urls import reverse
+from django.utils.translation import gettext_lazy as _
 
 from .forms import ContactForm
 
@@ -13,17 +16,20 @@ def services(request):
     return render(request, "pages/services.html", {"page_title": _("Services")})
 
 
+def tech(request):
+    return render(request, "pages/tech.html", {"page_title": _("Technologies")})
+
+
 def about(request):
     return render(request, "pages/about.html", {"page_title": _("About")})
 
 
 def contact(
-    request, page_title=_("Contact"), template_name="pages/contact.html"
+    request,
 ):
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
-            # TODO:  flash success message
             with mail.get_connection() as connection:
                 mail.EmailMessage(
                     subject="Contact Form Submission",
@@ -33,18 +39,24 @@ def contact(
                             for field, value in form.cleaned_data.items()
                         ]
                     ),
-                    to=("info@positronweb.ca",),
+                    to=(settings.EMAIL_HOST_USER,),
+                    from_email=settings.EMAIL_HOST_USER,
                     connection=connection,
                 ).send()
+            messages.success(
+                request, _("Your message has been sent, thank you.")
+            )
+            return HttpResponseRedirect(reverse("index"))
+        else:
+            messages.error(
+                request,
+                _("There are errors with your submission."),
+            )
     else:
         form = ContactForm()
 
     return render(
         request,
-        template_name,
-        {"page_title": page_title, "form": form},
+        "pages/contact.html",
+        {"page_title": _("Contact"), "form": form},
     )
-
-
-def project(request):
-    return contact(request, _("Project"), "pages/project.html")

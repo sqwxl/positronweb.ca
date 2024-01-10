@@ -111,4 +111,9 @@ COMPRESS_PRECOMPILERS = [
     ("text/x-scss", "sass {infile} {outfile}"),
 ]
 
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_HOST = "smtp.porkbun.com"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "info@positronweb.ca"
+EMAIL_HOST_PASSWORD = "2ch#Yn&YRK7rG?C"

@@ -1,0 +1,209 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-04 22:49+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: app/forms.py:10
+msgid "Name"
+msgstr "Nom"
+
+#: app/forms.py:11
+msgid "Email"
+msgstr "Adresse e-mail"
+
+#: app/forms.py:14
+msgid "Phone Number"
+msgstr "Numéro de téléphone"
+
+#: app/forms.py:18
+msgid "Message"
+msgstr ""
+
+#: app/forms.py:22
+msgid ""
+"Tell us about your project, your budget and your target launch date. We'll "
+"get back to you ASAP."
+msgstr ""
+"Parlez-nous de votre projet, de votre budget et de la date de lancement "
+"prévue. Nous vous répondrons dès que possible."
+
+#: app/templates/pages/contact.html:5
+msgid "Contact us"
+msgstr "Contactez-nous"
+
+#: app/templates/pages/contact.html:33
+msgid "Send"
+msgstr "Envoyer"
+
+#: app/templates/pages/index.html:10
+msgid ""
+"At Positron, we rely on proven technologies to deliver stellar user "
+"experience. This guarantees that your application will be fast, reliable and "
+"accessible for all users."
+msgstr ""
+"Chez Positron, nous nous appuyons sur des technologies éprouvées pour offrir "
+"une expérience utilisateur exceptionnelle. Cela garantit que votre "
+"application sera rapide, fiable et accessible à tous les utilisateurs."
+
+#: app/templates/pages/index.html:13
+msgid "Schedule a free consultation"
+msgstr "Planifiez une consultation gratuite"
+
+#: app/templates/pages/index.html:16
+msgid "Why choose Positron?"
+msgstr "Pourquoi choisir Positron?"
+
+#: app/templates/pages/index.html:19
+msgid ""
+"We offer custom solutions for your personal or business needs. We can help "
+"you with your website, web application, mobile application, or any other "
+"software project you have in mind."
+msgstr ""
+"Nous offrons des solutions personnalisées pour vos besoins personnels ou "
+"professionnels. Nous pouvons vous aider avec votre site web, votre "
+"application web, votre application mobile ou tout autre projet logiciel que "
+"vous avez en tête."
+
+#: app/templates/pages/index.html:25
+msgid "Who we are"
+msgstr "Qui sommes-nous?"
+
+#: app/templates/pages/index.html:28
+msgid ""
+"We are a small team of experienced developers. We are passionate about what "
+"we do and strive to offer only the best solutions to our clients."
+msgstr ""
+"Nous sommes une petite equipe de développeurs expérimentés. Nous sommes "
+"passionnés par ce que nous faisons et nous nous efforçons d'offrir les "
+"meilleures solutions à nos clients."
+
+#: app/templates/pages/services.html:5
+msgid "Your a business owner?"
+msgstr "Vous êtes un chef d'entreprise?"
+
+#: app/templates/pages/services.html:8
+msgid ""
+"Wether you need a simple website to present your business or a more complex "
+"one with a custom design, we can help you."
+msgstr ""
+"Que vous ayez besoin d'un site web simple pour présenter votre entreprise ou "
+"d'un site plus complexe avec un design personnalisé, nous pouvons vous aider."
+
+#: app/templates/pages/services.html:11
+msgid "Something else?"
+msgstr "Autre chose?"
+
+#: app/templates/pages/tech.html:12
+msgid ""
+"Positron web applications are made with <a href=\"https://www.djangoproject."
+"com/start/overview/\" target=\"_blank\">Django</a>.\n"
+"                It's a tool that helps us build secure and maintainable "
+"websites quickly and efficiently.<br>Here's why it's great for your project:"
+msgstr ""
+"Les applications web Positron sont réalisées avec <a href=\"https://www."
+"djangoproject.com/start/overview/\" target=\"_blank\">Django</a>. C'est un "
+"outil qui nous aide à construire des sites web sécurisés et maintenables "
+"rapidement et efficacement. Voici pourquoi c'est idéal pour votre projet:"
+
+#: app/templates/partials/nav.html:6 app/views.py:9
+msgid "Home"
+msgstr "Accueil"
+
+#: app/templates/partials/nav.html:9 app/views.py:13
+msgid "Services"
+msgstr ""
+
+#: app/templates/partials/nav.html:12 app/views.py:49
+msgid "Contact"
+msgstr ""
+
+#: app/templates/partials/nav.html:15 app/views.py:21
+msgid "About"
+msgstr "A propos"
+
+#: app/templatetags/tagline.py:9
+msgid "The web how it was meant to be"
+msgstr "Le web tel qu'il était censé être"
+
+#: app/templatetags/tagline.py:10
+msgid "The snippy, snappy subatomic particle"
+msgstr "La particule subatomique pétillante"
+
+#: app/templatetags/tagline.py:11
+msgid "The web artisans"
+msgstr "Les artisans du web"
+
+#: app/templatetags/tagline.py:12
+msgid "Simple, reliable, and fast"
+msgstr "Simple, fiable et rapide"
+
+#: app/templatetags/tagline.py:13
+msgid "Your new favorite antiparticle"
+msgstr "Votre nouvelle antiparticule préférée"
+
+#: app/templatetags/tagline.py:14
+msgid "Where technology meets craftsmanship"
+msgstr "Là où la technologie rencontre l'artisanat"
+
+#: app/templatetags/tagline.py:15
+msgid "Powered by positronic brains"
+msgstr "Alimenté par des cerveaux positroniques"
+
+#: app/templatetags/tagline.py:16
+msgid "Web crafting with a positive spin"
+msgstr "Artisanat du web avec une touche positive"
+
+#: app/templatetags/tagline.py:17
+msgid "Bit by positronic bit"
+msgstr "Bit par bit positronique"
+
+#: app/templatetags/tagline.py:18
+msgid "Enjoy a warm cup of positronic tea"
+msgstr "Dégustez une tasse de thé positronique"
+
+#: app/templatetags/tagline.py:19
+msgid "Positronic precision in every pixel"
+msgstr "Précision positronique dans chaque pixel"
+
+#: app/templatetags/tagline.py:20
+msgid "Positive design, positive impact"
+msgstr "Design positif, impact positif"
+
+#: app/templatetags/tagline.py:21
+msgid "The positively powerful positronic web experience"
+msgstr "L'expérience web positivement positronique"
+
+#: app/templatetags/tagline.py:22
+msgid "Infused with positively charged particles"
+msgstr "Infusé de particules chargées positivement"
+
+#: app/templatetags/tagline.py:23
+msgid "Thunderstruck by a bolt of positronic lightning"
+msgstr "Foudroyé par un éclair positronique"
+
+#: app/templatetags/tagline.py:24
+msgid "Artisanal bytes served up on a positronic palette"
+msgstr "Octets artisanaux servis sur une palette positronique"
+
+#: app/templatetags/tagline.py:25
+msgid "Meet the electron's nerdy cousin"
+msgstr "Rencontrez le cousin farfelu de l'électron"
+
+#: app/views.py:17
+msgid "Technologies"
+msgstr ""

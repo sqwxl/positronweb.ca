@@ -1,6 +1,6 @@
-:root {
-}
 html {
+  background: var(--background);
+  color: var(--foreground);
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji";
 }
@@ -23,6 +23,8 @@ h4,
 h5,
 h6 {
   font-weight: bold;
+  margin-top: 0.75em;
+  margin-bottom: 0.5em;
 }
 h1 {
   font-size: 2rem;
@@ -33,51 +35,35 @@ h2 {
 h3 {
   font-size: 1.25rem;
 }
-h4 {
-}
-h5 {
-}
-h6 {
-}
-
-header {
-}
 
 nav {
-}
-nav ul,
-nav ol {
-}
-nav li {
-}
-nav a {
-}
-nav a:visited {
-}
-nav a:hover {
-}
-nav a:active {
-}
+  margin: 1rem auto 0;
+  max-width: min(45rem, 90%);
 
-main {
-}
+  & menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 
-article {
-}
+  & a {
+    text-decoration: none;
+    color: var(--foreground);
 
-section {
-}
+    &:hover {
+      text-decoration: underline;
+      color: var(--foreground);
+    }
 
-aside {
-}
-
-search {
-}
-
-footer {
-}
-
-address {
+    &:visited {
+      color: var(--foreground);
+    }
+  }
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -93,44 +79,12 @@ blockquote,
 figure,
 hr,
 dl {
-}
-
-p {
+  margin: 0.75em 0;
 }
 
 ol,
 ul {
-}
-ol {
-}
-ul {
-}
-li {
-}
-ol ol,
-ol ul,
-ul ul,
-ul ol {
-}
-li li {
-}
-
-pre {
-}
-pre code {
-}
-pre samp {
-}
-
-blockquote {
-}
-
-figure {
-}
-figcaption {
-}
-
-hr {
+  padding-left: 2em;
 }
 
 dl {
@@ -145,12 +99,10 @@ Inline text semantics
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 a {
+  color: var(--primary);
 }
 a:visited {
-}
-a:hover {
-}
-a:active {
+  color: var(--primary);
 }
 
 strong {
@@ -174,51 +126,6 @@ s {
 mark {
 }
 
-/* If you specify a font size, consider using the `em` unit so that it works
-universally, e.g. for both `h1 small` and `p small` */
-small {
-}
-sub {
-}
-sup {
-}
-
-code {
-}
-
-dfn {
-}
-abbr {
-}
-abbr[title] {
-}
-
-var {
-}
-kbd {
-}
-kbd kbd {
-}
-samp {
-}
-
-u {
-}
-
-data {
-}
-time {
-}
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-Demarcating edits
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
-del {
-}
-ins {
-}
-
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Embedded content
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -227,64 +134,16 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-}
-svg {
-}
-video {
-}
-canvas {
-}
-audio {
-}
-object {
-}
-
-noscript {
-}
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-Table content
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
-table {
-}
-caption {
-}
-col:first-child {
-}
-thead {
-}
-tbody {
-}
-tfoot {
-}
-tr {
-}
-th {
-}
-td {
+  margin: 0 auto;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Forms
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-fieldset {
-}
-fieldset:disabled {
-}
-legend {
-}
-
-form {
-}
-
 label {
-}
-
-::placeholder {
-}
-:focus::placeholder {
+  display: block;
+  margin: 0.4em 0 0.2em;
 }
 
 /* Overall styling, e.g. vertical spacing */
@@ -292,6 +151,7 @@ input,
 textarea,
 select,
 button {
+  border-radius: 0.25rem;
 }
 
 /* `textarea` and `input` elements that share a similar look and similar styling
@@ -310,143 +170,42 @@ input[type="datetime-local"],
 input[type="month"],
 input[type="week"],
 input[type="time"] {
-  border: 1px solid;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-/* - individual styling */
-textarea {
-}
-input[type="text"] {
-}
-input[type="password"] {
-}
-input[type="email"] {
-}
-input[type="tel"] {
-}
-input[type="number"] {
-}
-input[type="search"] {
-}
-input[type="url"] {
-}
-input[type="date"] {
-}
-input[type="datetime-local"] {
-}
-input[type="month"] {
-}
-input[type="week"] {
-}
-input[type="time"] {
-}
-/* Tick boxes */
-input[type="checkbox"],
-input[type="radio"] {
-}
-input[type="checkbox"]:checked,
-input[type="radio"]:checked {
-}
-input[type="checkbox"] {
-}
-input[type="checkbox"]:checked {
-}
-input[type="radio"] {
-}
-input[type="radio"]:checked {
-}
-/* Other input fields, some with limited styling capabilities */
-input[type="file"] {
-}
-input[type="color"] {
-}
-input[type="range"] {
+  border: 1px solid var(--muted);
+  padding: 0.4em;
 }
 
-select {
-}
-optgroup {
-}
-option {
-}
-option:checked {
-}
-datalist {
-}
-
+.anchor-btn,
 button,
 input[type="submit"] {
+  display: block;
+  width: fit-content;
   cursor: pointer;
   border: none;
   border-radius: 0.25rem;
   background-color: var(--primary);
   color: var(--background);
-  font-weight: 600;
+  text-decoration: none;
   padding: 0.5rem 1rem;
   margin: 0.5rem 0;
 
+  &:visited {
+    color: var(--background);
+  }
+
   &:hover {
-    background: lightblue;
+    filter: opacity(0.9);
   }
 
   &:disabled {
+    background-color: var(--muted);
+    color: var(--foreground);
+    cursor: not-allowed;
   }
-}
-
-button.secondary {
-}
-button.secondary:disabled {
-}
-
-/* This matches forms or form elements that are invalid *and* have been
-interacted with. Note that:
-1) You may need to add the `interacted` class to forms yourself
-2) You may need to add the `touched` class to form fields yourself
-3) `:user-invalid` is a working draft and not yet supported by most browsers
-4) `:-moz-ui-invalid` is non-standard and only works in Firefox
-Form validation error messages will appear (in capable browsers) regardless of
-this styling. You can omit 1) and 2) and still have working forms. Perfect
-example of progressive enhancement. */
-/* Applies to invalid forms */
-form.interacted:invalid {
-}
-/* Applies to invalid form fields. You would need to repeat your declarations
-for the following three groups of selectors individually. Browsers completely
-ignore any rule that contains a selector they do not know. */
-form.interacted :invalid,
-form .touched:invalid {
-}
-:user-invalid {
-}
-:-moz-ui-invalid {
-}
-
-output {
-}
-
-progress {
-}
-meter {
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Interactive elements
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
-details {
-}
-details[open] {
-}
-summary {
-}
-details[open] summary {
-}
-
-dialog {
-}
-dialog::backdrop {
-}
 
 /* Some form fields, `details`, elements with `tabindex`, and possibly other
 elements can be focussed. You should use `:focus-visible` instead of `:focus`
@@ -480,9 +239,6 @@ Media queries
 }
 
 @media (orientation: landscape) {
-}
-
-@media print {
 }
 
 /*

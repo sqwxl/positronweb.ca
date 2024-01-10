@@ -7,12 +7,28 @@
 {% endblock header %}
 
 {% block content %}
+    <ul>
+        <li>
+            <a href="mailto:info@positronweb.ca">info@postironweb.ca</a>
+        </li>
+        <li>
+            <a href="tel:438-838-8413">438-838-8413</a>
+        </li>
+    </ul>
     <p>
-        <form method="post">
+        <form method="post" hx-indicator="#submit-btn">
             {% csrf_token %}
             {{ form }}
-            <button>
-                {% translate "Send" %}
+            <button id="submit-btn">
+                <span>
+                    <style>
+                        .htmx-request me {
+                            display: none
+                        }
+                    </style>
+                    {% translate "Send" %}
+                </span>
+                {% include "partials/spinner.html" %}
             </button>
         </form>
     </p>

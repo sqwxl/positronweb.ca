@@ -33,15 +33,15 @@
                   type="text/x-scss"
                   href="{% static 'css/style.scss' %}">
         {% endcompress %}
+        <script src="{% static 'js/inline-css.js' %}"></script>
         {% if debug %}
             <script defer src="{% static 'js/htmx/htmx.js' %}"></script>
-            <script defer src="{% static 'js/_hyperscript.js' %}"></script>
+            <script defer src="{% static 'js/alpine.js' %}"></script>
         {% else %}
             <script defer src="{% static 'js/htmx/htmx.min.js' %}"></script>
-            <script defer src="{% static 'js/_hyperscript.min.js' %}"></script>
+            <script defer src="{% static 'js/alpine.min.js' %}"></script>
         {% endif %}
         <script defer src="{% static 'js/htmx/ext/preload.js' %}"></script>
-        <script defer src="{% static 'js/inline-css.js' %}"></script>
         <script>
             function updateTheme() {
                 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -88,5 +88,6 @@
                 }
             </script>
         {% endif %}
+        {% include "partials/flash.html" %}
     </body>
 </html>
