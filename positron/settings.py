@@ -1,19 +1,19 @@
+import environ
 import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DEBUG = os.environ.get("DEBUG", False)
-SECRET_KEY = os.environ.get(
-    "SECRET_KEY",
-    "django-insecure-pi7fsa%=6^^!jfl!w1$850#%g&seqvl5-w^&5jcnzme4sk)sy3",
+env = environ.Env()
+env.read_env(os.path.join(BASE_DIR, ".env"))
+
+
+DEBUG = env.bool("DEBUG", default=False)
+SECRET_KEY = env("SECRET_KEY")
+ALLOWED_HOSTS = env.list(
+    "ALLOWED_HOSTS", default=["localhost", "0.0.0.0", "127.0.0.1"]
 )
-ALLOWED_HOSTS = list(
-    filter(None, os.environ.get("ALLOWED_HOSTS", "").split(","))
-)
-CSRF_TRUSTED_ORIGINS = list(
-    filter(None, os.environ.get("CSRF_TRUSTED_ORIGINS", "").split(","))
-)
+CSRF_TRUSTED_ORIGINS = env.list("CSRF_TRUSTED_ORIGINS", default=[])
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -111,9 +111,31 @@ COMPRESS_PRECOMPILERS = [
     ("text/x-scss", "sass {infile} {outfile}"),
 ]
 
-# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-EMAIL_HOST = "smtp.porkbun.com"
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = "info@positronweb.ca"
-EMAIL_HOST_PASSWORD = "2ch#Yn&YRK7rG?C"
+if DEBUG:
+    print("Running in DEBUG mode")
+    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+else:
+    EMAIL_CONFIG = env.email("EMAIL_URL")
+    vars().update(EMAIL_CONFIG)
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "file": {
+            "level": "INFO",
+            "class": "logging.FileHandler",
+            "filename": BASE_DIR / "debug.log",
+        },
+        "console": {
+            "class": "logging.StreamHandler",
+        },
+    },
+    "loggers": {
+        "django": {
+            "handlers": ["file", "console"],
+            "level": "INFO",
+            "propagate": True,
+        },
+    },
+}

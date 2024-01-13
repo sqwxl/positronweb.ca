@@ -30,7 +30,7 @@ def contact(
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
-            with mail.get_connection() as connection:
+            with mail.get_connection(fail_silently=False) as connection:
                 mail.EmailMessage(
                     subject="Contact Form Submission",
                     body="\n".join(
@@ -42,7 +42,7 @@ def contact(
                     to=(settings.EMAIL_HOST_USER,),
                     from_email=settings.EMAIL_HOST_USER,
                     connection=connection,
-                ).send()
+                ).send(fail_silently=False)
             messages.success(
                 request, _("Your message has been sent, thank you.")
             )
