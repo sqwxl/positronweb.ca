@@ -110,6 +110,7 @@ COMPRESS_FILTERS = {"css": ["compressor.filters.css_default.CssAbsoluteFilter"]}
 COMPRESS_PRECOMPILERS = [
     ("text/x-scss", "sass {infile} {outfile}"),
 ]
+COMPRESS_OFFLINE = True
 
 if DEBUG:
     print("Running in DEBUG mode")
