@@ -1,10 +1,10 @@
 from django.contrib import messages
 from django.conf import settings
-from django.core.mail import send_mail
 from django.shortcuts import HttpResponseRedirect, render
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 
+from positron.celery import send_mail
 from .forms import ContactForm
 
 
@@ -30,23 +30,23 @@ def contact(
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
-            sent = send_mail(
-                "Contact Form Submission",
-                "\n".join(
-                    [
-                        f"{field}: {value}"
-                        for field, value in form.cleaned_data.items()
-                    ]
-                ),
-                settings.EMAIL_HOST_USER,
-                [settings.EMAIL_HOST_USER],
-            )
-            if sent == 1:
+            try:
+                send_mail.delay(
+                    "Contact Form Submission",
+                    "\n".join(
+                        [
+                            f"{field}: {value}"
+                            for field, value in form.cleaned_data.items()
+                        ]
+                    ),
+                    settings.EMAIL_HOST_USER,
+                    [settings.EMAIL_HOST_USER],
+                )
                 messages.success(
                     request, _("Your message has been sent, thank you.")
                 )
                 return HttpResponseRedirect(reverse("index"))
-            else:
+            except Exception:
                 messages.error(
                     request,
                     _(

@@ -1,8 +1,14 @@
+import os
 from django.core import mail
 from celery import Celery
 
-app = Celery("positron")
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "positron.settings")
+
+app = Celery("positron", broker="redis://localhost")
+
 app.config_from_object("django.conf:settings", namespace="CELERY")
+
 app.autodiscover_tasks()
 
 
