@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.conf import settings
-from django.core import mail
+from django.core.mail import send_mail
 from django.shortcuts import HttpResponseRedirect, render
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
@@ -30,23 +30,29 @@ def contact(
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
-            with mail.get_connection(fail_silently=False) as connection:
-                mail.EmailMessage(
-                    subject="Contact Form Submission",
-                    body="\n".join(
-                        [
-                            f"{field}: {value}"
-                            for field, value in form.cleaned_data.items()
-                        ]
-                    ),
-                    to=(settings.EMAIL_HOST_USER,),
-                    from_email=settings.EMAIL_HOST_USER,
-                    connection=connection,
-                ).send(fail_silently=False)
-            messages.success(
-                request, _("Your message has been sent, thank you.")
+            sent = send_mail(
+                "Contact Form Submission",
+                "\n".join(
+                    [
+                        f"{field}: {value}"
+                        for field, value in form.cleaned_data.items()
+                    ]
+                ),
+                settings.EMAIL_HOST_USER,
+                [settings.EMAIL_HOST_USER],
             )
-            return HttpResponseRedirect(reverse("index"))
+            if sent == 1:
+                messages.success(
+                    request, _("Your message has been sent, thank you.")
+                )
+                return HttpResponseRedirect(reverse("index"))
+            else:
+                messages.error(
+                    request,
+                    _(
+                        "There was an error sending your message, please try again."
+                    ),
+                )
         else:
             messages.error(
                 request,

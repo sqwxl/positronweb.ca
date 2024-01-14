@@ -112,12 +112,16 @@ COMPRESS_PRECOMPILERS = [
 ]
 COMPRESS_OFFLINE = True
 
-if DEBUG:
-    print("Running in DEBUG mode")
-    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-else:
-    EMAIL_CONFIG = env.email("EMAIL_URL")
-    vars().update(EMAIL_CONFIG)
+# if DEBUG:
+#     print("Running in DEBUG mode")
+#     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+# else:
+EMAIL_HOST = env("EMAIL_HOST")
+EMAIL_PORT = env("EMAIL_PORT")
+EMAIL_HOST_USER = env("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 LOGGING = {
     "version": 1,
