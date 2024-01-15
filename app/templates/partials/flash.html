@@ -2,7 +2,7 @@
     <ul class="messagelist"
         x-data="{open: true}"
         x-show="open"
-        x-init="setTimeout(() => open = false, 2000)"
+        @click.outside="open = false"
         x-transition.duration.500ms>
         <style>
             me {
