@@ -32,7 +32,7 @@ def contact(
         if form.is_valid():
             try:
                 send_mail.delay(
-                    "Contact Form Submission",
+                    f"Message from {form.cleaned_data['name']}",
                     "\n".join(
                         [
                             f"{field}: {value}"

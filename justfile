@@ -17,9 +17,23 @@ populate: rm-migrations migrate
     python3 manage.py setup_test_data
 
 setup:
-    pip3 install -r requirements.txt
-    pre-commit install
-    python3 manage.py makemigrations
+    pip install -r requirements.txt
+    python manage.py makemigrations
+    python manage.py migrate
+    python manage.py collectstatic --noinput
+    python manage.py compress
+
+setup-server:
+    #!/usr/bin/env bash
+    sudo dnf install redis nginx
+    cp extra/systemd/* /etc/systemd/system/
+    cp extra/celeryrc /etc/default/celeryrc
+    sudo systemctl daemon-reload
+    sudo systemctl enable celery.service
+    sudo systemctl enable gunicorn.service
+    sudo systemctl enable redis.service
+    sudo systemctl enable nginx.service
+    sudo reboot
 
 rm-migrations:
     #!/usr/bin/env bash
