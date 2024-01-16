@@ -5,11 +5,9 @@ from celery import Celery
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "positron.settings")
 
-app = Celery("positron", broker="redis://localhost")
+app = Celery("positron")
 
 app.config_from_object("django.conf:settings", namespace="CELERY")
-
-app.autodiscover_tasks()
 
 
 # create send_mail task

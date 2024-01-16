@@ -123,6 +123,9 @@ EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
+CELERY_BROKER_URL = "redis://localhost"
+CELERY_TIMEZONE = TIME_ZONE
+
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
