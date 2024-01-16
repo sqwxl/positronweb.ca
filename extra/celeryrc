@@ -21,3 +21,4 @@ CELERYD_LOG_LEVEL="INFO"
 
 # Extra command-line arguments to the worker
 # CELERYD_OPTS="--time-limit=300 --concurrency=8"
+CELERYD_OPTS=""
