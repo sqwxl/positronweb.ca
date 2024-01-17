@@ -13,7 +13,6 @@
     pkgs.pyright
     pkgs.ruff
     pkgs.ruff-lsp
-    pkgs.tailwindcss
   ];
 
   languages.python.enable = true;

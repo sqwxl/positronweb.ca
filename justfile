@@ -1,9 +1,5 @@
 run:
-    tailwindcss -i static/css/input.css -o static/css/output.css
     python3 manage.py runserver
-
-css:
-    tailwindcss -i static/css/input.css -o static/css/output.css --watch
 
 run-containers:
     podman build -t harfang -f Dockerfile .
