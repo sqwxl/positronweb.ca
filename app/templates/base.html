@@ -70,6 +70,7 @@
           hx-ext="preload"
           hx-boost="true">
         {% include "partials/header.html" %}
+        {% include "partials/flash.html" %}
 
         {% block body %}
         {% endblock body %}
@@ -88,6 +89,6 @@
                 }
             </script>
         {% endif %}
-        {% include "partials/flash.html" %}
+        {% include "partials/footer.html" %}
     </body>
 </html>

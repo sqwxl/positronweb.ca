@@ -1,18 +1,30 @@
 {% extends "base_page.html" %}
 
+{% load static %}
+
 {% block header %}
-    <h1>
-        {% trans "Contact us" %}
-    </h1>
+    <hgroup>
+        <h1>
+            {% trans "Contact Us" %}
+        </h1>
+        <img src="{% static 'images/contact/plane.svg' %}">
+    </hgroup>
 {% endblock header %}
 
 {% block content %}
     <ul>
+        <style>
+            me {
+                li {
+                    list-style: none;
+                }
+            }
+        </style>
         <li>
             <a href="mailto:info@positronweb.ca">info@postironweb.ca</a>
         </li>
         <li>
-            <a href="tel:438-838-8413">438-838-8413</a>
+            <a href="tel:438-838-8413">438 838 8413</a> &mdash; <a href="tel:450-604-0334">450 604 0334</a>
         </li>
     </ul>
     <p>

@@ -4,8 +4,14 @@ from django.shortcuts import HttpResponseRedirect, render
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 
-from positron.celery import send_mail
 from .forms import ContactForm
+
+if settings.DEBUG:
+    from django.core.mail import send_mail
+else:
+    from positron.celery import send_mail
+
+    send_mail = send_mail.delay
 
 
 def index(request):
@@ -31,7 +37,7 @@ def contact(
         form = ContactForm(request.POST)
         if form.is_valid():
             try:
-                send_mail.delay(
+                send_mail(
                     f"Message from {form.cleaned_data['name']}",
                     "\n".join(
                         [
@@ -43,9 +49,13 @@ def contact(
                     [settings.EMAIL_HOST_USER],
                 )
                 messages.success(
-                    request, _("Your message has been sent, thank you.")
+                    request,
+                    _("Your message has been sent, thank you."),
                 )
-                return HttpResponseRedirect(reverse("index"))
+
+                return HttpResponseRedirect(
+                    reverse("index"),
+                )
             except Exception:
                 messages.error(
                     request,

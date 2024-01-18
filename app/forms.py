@@ -11,7 +11,7 @@ class ContactForm(forms.Form):
     email = forms.EmailField(label=_("Email"))
     number = forms.CharField(
         widget=forms.TextInput(attrs={"type": "tel"}),
-        label=_("Phone Number"),
+        label=_("Phone Number (optional)"),
         required=False,
     )
     message = forms.CharField(

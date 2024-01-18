@@ -9,12 +9,28 @@ body {
   line-height: 1.5;
   display: grid;
   grid-template-columns: 1fr min(45rem, 90%) 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
   margin: 0;
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: url("/static/images/bubble_chamber-666x2048.wepb");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(1) grayscale(1) opacity(0.05);
+  }
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Content sectioning
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+main {
+}
 
 h1,
 h2,
@@ -23,21 +39,31 @@ h4,
 h5,
 h6 {
   font-weight: bold;
-  margin-top: 0.75em;
-  margin-bottom: 0.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1.25em;
+  text-align: center;
 }
 h1 {
   font-size: 2rem;
 }
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+}
+
+hgroup {
+  display: flex;
+  align-items: center;
+  & img {
+    max-height: 3em;
+    margin: 1em;
+  }
 }
 
 nav {
-  margin: 1rem auto 0;
+  margin: 0 auto;
   max-width: min(45rem, 90%);
 
   & menu {
@@ -85,6 +111,10 @@ dl {
 ol,
 ul {
   padding-left: 2em;
+}
+
+li {
+  margin: 1.2em 0;
 }
 
 dl {
@@ -172,6 +202,7 @@ input[type="week"],
 input[type="time"] {
   border: 1px solid var(--muted);
   padding: 0.4em;
+  max-width: 100%;
 }
 
 .anchor-btn,
@@ -187,6 +218,11 @@ input[type="submit"] {
   text-decoration: none;
   padding: 0.5rem 1rem;
   margin: 0.5rem 0;
+
+  &:focus {
+    outline: var(--primary) solid 2px;
+    outline-offset: 2px;
+  }
 
   &:visited {
     color: var(--background);

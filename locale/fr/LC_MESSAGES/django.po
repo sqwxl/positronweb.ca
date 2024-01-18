@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-04 22:49+0000\n"
+"POT-Creation-Date: 2024-01-18 21:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,8 +27,8 @@ msgid "Email"
 msgstr "Adresse e-mail"
 
 #: app/forms.py:14
-msgid "Phone Number"
-msgstr "Numéro de téléphone"
+msgid "Phone Number (optional)"
+msgstr "Numéro de téléphone (facultatif)"
 
 #: app/forms.py:18
 msgid "Message"
@@ -42,103 +42,121 @@ msgstr ""
 "Parlez-nous de votre projet, de votre budget et de la date de lancement "
 "prévue. Nous vous répondrons dès que possible."
 
-#: app/templates/pages/contact.html:5
-msgid "Contact us"
+#: app/templates/pages/contact.html:8
+msgid "Contact Us"
 msgstr "Contactez-nous"
 
-#: app/templates/pages/contact.html:33
+#: app/templates/pages/contact.html:41
 msgid "Send"
 msgstr "Envoyer"
 
 #: app/templates/pages/index.html:10
-msgid ""
-"At Positron, we rely on proven technologies to deliver stellar user "
-"experience. This guarantees that your application will be fast, reliable and "
-"accessible for all users."
-msgstr ""
-"Chez Positron, nous nous appuyons sur des technologies éprouvées pour offrir "
-"une expérience utilisateur exceptionnelle. Cela garantit que votre "
-"application sera rapide, fiable et accessible à tous les utilisateurs."
+msgid "Why Positron?"
+msgstr "Pourquoi Positron?"
 
-#: app/templates/pages/index.html:13
+#: app/templates/pages/index.html:30
+msgid "Speed"
+msgstr "Vitesse"
+
+#: app/templates/pages/index.html:34
+msgid "Efficient software that is snappy and responsive"
+msgstr "Logiciels rapides, efficaces et réactifs"
+
+#: app/templates/pages/index.html:40
+msgid "Stability"
+msgstr "Stabilité"
+
+#: app/templates/pages/index.html:45
+msgid ""
+"Built with battle-tested technologies to provide reliable and safe user "
+"experiences"
+msgstr "Construit avec des technologies éprouvées pour des expériences sûres"
+
+#: app/templates/pages/index.html:52
+msgid "Accessibility"
+msgstr "Accessibilité"
+
+#: app/templates/pages/index.html:56
+msgid "Clear, simple and functional designs that are a pleasure to use"
+msgstr ""
+"Des designs clairs, simples et fonctionnels qui sont un plaisir à utiliser"
+
+#: app/templates/pages/index.html:62
 msgid "Schedule a free consultation"
 msgstr "Planifiez une consultation gratuite"
 
-#: app/templates/pages/index.html:16
-msgid "Why choose Positron?"
-msgstr "Pourquoi choisir Positron?"
+#: app/templates/pages/index.html:66
+msgid "Positron uses trusted, open-source tech"
+msgstr "Positron utilise des technologies open-source de confiance"
 
-#: app/templates/pages/index.html:19
+#: app/templates/pages/services.html:9
+msgid "Websites"
+msgstr "Sites web"
+
+#: app/templates/pages/services.html:13
 msgid ""
-"We offer custom solutions for your personal or business needs. We can help "
-"you with your website, web application, mobile application, or any other "
-"software project you have in mind."
+"Wether you need a website to present your business, an artist's portofolio "
+"or a complex project with a custom design, we can help you."
 msgstr ""
-"Nous offrons des solutions personnalisées pour vos besoins personnels ou "
-"professionnels. Nous pouvons vous aider avec votre site web, votre "
-"application web, votre application mobile ou tout autre projet logiciel que "
-"vous avez en tête."
+"Que vous ayez besoin d'un site web pour présenter votre entreprise, un "
+"portofolio d'artiste ou un projet complexe avec un design personnalisé, nous "
+"pouvons vous aider."
 
-#: app/templates/pages/index.html:25
-msgid "Who we are"
-msgstr "Qui sommes-nous?"
+#: app/templates/pages/services.html:17
+msgid "Applications"
+msgstr ""
 
-#: app/templates/pages/index.html:28
+#: app/templates/pages/services.html:23
 msgid ""
-"We are a small team of experienced developers. We are passionate about what "
-"we do and strive to offer only the best solutions to our clients."
+"Mobile apps for iOS & Android as well as cross-platform apps for Windows, "
+"MacOS and Linux."
 msgstr ""
-"Nous sommes une petite equipe de développeurs expérimentés. Nous sommes "
-"passionnés par ce que nous faisons et nous nous efforçons d'offrir les "
-"meilleures solutions à nos clients."
+"Applications mobiles pour iOS et Android ainsi que des applications "
+"multiplateformes pour Windows, MacOS et Linux."
 
-#: app/templates/pages/services.html:5
-msgid "Your a business owner?"
-msgstr "Vous êtes un chef d'entreprise?"
+#: app/templates/pages/services.html:29
+msgid "E-Commerce"
+msgstr ""
 
-#: app/templates/pages/services.html:8
+#: app/templates/pages/services.html:33
 msgid ""
-"Wether you need a simple website to present your business or a more complex "
-"one with a custom design, we can help you."
+"Want to sell stuff online? Cut costs and avoid paying hefty commissions by "
+"managing your own online store."
 msgstr ""
-"Que vous ayez besoin d'un site web simple pour présenter votre entreprise ou "
-"d'un site plus complexe avec un design personnalisé, nous pouvons vous aider."
+"Vous voulez vendre des choses en ligne ? Réduisez les coûts et évitez de "
+"payer des commissions en gérant votre propre boutique en ligne."
 
-#: app/templates/pages/services.html:11
+#: app/templates/pages/services.html:36
 msgid "Something else?"
 msgstr "Autre chose?"
 
-#: app/templates/pages/tech.html:12
-msgid ""
-"Positron web applications are made with <a href=\"https://www.djangoproject."
-"com/start/overview/\" target=\"_blank\">Django</a>.\n"
-"                It's a tool that helps us build secure and maintainable "
-"websites quickly and efficiently.<br>Here's why it's great for your project:"
-msgstr ""
-"Les applications web Positron sont réalisées avec <a href=\"https://www."
-"djangoproject.com/start/overview/\" target=\"_blank\">Django</a>. C'est un "
-"outil qui nous aide à construire des sites web sécurisés et maintenables "
-"rapidement et efficacement. Voici pourquoi c'est idéal pour votre projet:"
+#: app/templates/pages/services.html:41
+msgid "Tell us about your project!"
+msgstr "Parlez-nous de votre projet !"
 
-#: app/templates/partials/nav.html:6 app/views.py:9
+#: app/templates/partials/footer.html:9
+msgid "Copyright Positron 2024"
+msgstr ""
+
+#: app/templates/partials/nav.html:6 app/views.py:12
 msgid "Home"
 msgstr "Accueil"
 
-#: app/templates/partials/nav.html:9 app/views.py:13
+#: app/templates/partials/nav.html:9 app/views.py:16
 msgid "Services"
 msgstr ""
 
-#: app/templates/partials/nav.html:12 app/views.py:49
+#: app/templates/partials/nav.html:12 app/views.py:67
 msgid "Contact"
 msgstr ""
 
-#: app/templates/partials/nav.html:15 app/views.py:21
+#: app/templates/partials/nav.html:15 app/views.py:24
 msgid "About"
-msgstr "A propos"
+msgstr "À propos"
 
 #: app/templatetags/tagline.py:9
 msgid "The web how it was meant to be"
-msgstr "Le web tel qu'il était censé être"
+msgstr "Le web tel qu'il est censé être"
 
 #: app/templatetags/tagline.py:10
 msgid "The snippy, snappy subatomic particle"
@@ -204,6 +222,20 @@ msgstr "Octets artisanaux servis sur une palette positronique"
 msgid "Meet the electron's nerdy cousin"
 msgstr "Rencontrez le cousin farfelu de l'électron"
 
-#: app/views.py:17
+#: app/views.py:20
 msgid "Technologies"
 msgstr ""
+
+#: app/views.py:46
+msgid "Your message has been sent, thank you."
+msgstr "Votre message a été envoyé, merci."
+
+#: app/views.py:53
+msgid "There was an error sending your message, please try again."
+msgstr ""
+"Une erreur s'est produite lors de l'envoi de votre message, veuillez "
+"réessayer."
+
+#: app/views.py:59
+msgid "There are errors with your submission."
+msgstr "Il y a des erreurs dans votre soumission."

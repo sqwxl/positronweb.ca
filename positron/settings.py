@@ -9,6 +9,9 @@ env.read_env(os.path.join(BASE_DIR, ".env"))
 
 
 DEBUG = env.bool("DEBUG", default=False)
+if DEBUG:
+    print("Running in DEBUG mode")
+
 SECRET_KEY = env("SECRET_KEY")
 ALLOWED_HOSTS = env.list(
     "ALLOWED_HOSTS", default=["localhost", "0.0.0.0", "127.0.0.1"]
@@ -112,10 +115,8 @@ COMPRESS_PRECOMPILERS = [
 ]
 COMPRESS_OFFLINE = True
 
-# if DEBUG:
-#     print("Running in DEBUG mode")
-#     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-# else:
+if DEBUG:
+    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 EMAIL_HOST = env("EMAIL_HOST")
 EMAIL_PORT = env("EMAIL_PORT")
 EMAIL_HOST_USER = env("EMAIL_HOST_USER")

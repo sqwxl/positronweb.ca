@@ -7,28 +7,119 @@
 
 {% block content %}
     <h2>
-        {% trans "Why choose Positron for your next project?" %}
+        {% trans "Why Positron?" %}
     </h2>
     <ul>
+        <style>
+            li {
+                list-style: none;
+
+                & hgroup {
+                    font-weight: bold;
+                    justify-content: center;
+
+                    img {
+                        max-height: 6em;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        </style>
         <li>
-            {% trans "<b>Accessibility:</b> clear, simple and functional designs that are a pleasure to use" %}
+            <hgroup>
+                <img src="{% static 'images/index/rocket.svg' %}">
+                <h3>
+                    {% trans "Speed" %}
+                </h3>
+            </hgroup>
+            <p>
+                {% trans "Efficient software that is snappy and responsive" %}
+            </p>
         </li>
         <li>
-            {% trans "<b>Stability:</b> we use battle-tested technologies to provide reliable and safe user experiences" %} <a href="{% url 'tech' %}">{% trans "Learn more" %}</a>
+            <hgroup>
+                <h3>
+                    {% trans "Stability" %}
+                </h3>
+                <img src="{% static 'images/index/bicep.svg' %}">
+            </hgroup>
+            <p>
+                {% trans "Built with battle-tested technologies to provide reliable and safe user experiences" %}
+            </p>
         </li>
         <li>
-            {% trans "<b>Speed:</b> we create software that is snappy and responsive" %}
+            <hgroup>
+                <img src="{% static 'images/index/a11y.svg' %}">
+                <h3>
+                    {% trans "Accessibility" %}
+                </h3>
+            </hgroup>
+            <p>
+                {% trans "Clear, simple and functional designs that are a pleasure to use" %}
+            </p>
         </li>
     </ul>
-    <p>
+    <p align="center" style="margin-top: 4em">
         <a role="button" class="anchor-btn" href="{% url 'contact' %}">
             {% trans "Schedule a free consultation" %}
         </a>
     </p>
     <h2>
-        {% trans "Who we are" %}
+        {% trans "Positron uses trusted, open-source tech" %}
     </h2>
-    <p>
-        {% trans "We are a small team of experienced developers. We are passionate about what we do and strive to offer only the best solutions to our clients." %}
-    </p>
+    <div>
+        <style>
+            me {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+
+                & a {
+                    margin: 0.5rem;
+                }
+
+                & img {
+                    max-height: 3.5rem;
+                    max-width: 10em;
+                }
+            }
+        </style>
+        <a href="https://www.djangoproject.com/start/overview" target="_blank">
+            <img src="{% static 'images/django.svg' %}" alt="django logo">
+        </a>
+        <a href="https://www.postgresql.org/" target="_blank">
+            <img src="{% static 'images/postgres.webp' %}" alt="postgresql logo">
+        </a>
+        <a href="https://www.sqlite.org/index.html" target="_blank">
+            <img src="{% static 'images/sqlite.webp' %}" alt="sqlite logo">
+        </a>
+        <a href="https://tailwindcss.com/" target="_blank">
+            <img src="{% static 'images/tailwindcss.svg' %}" alt="tailwindcss logo">
+        </a>
+        <a href="https://htmx.org/" target="_blank">
+            <img src="{% static 'images/htmx.webp' %}" alt="htmx logo">
+        </a>
+        <a href="https://alpinejs.dev/" target="_blank">
+            <img src="{% static 'images/alpinejs.svg' %}" alt="alpinejs logo">
+        </a>
+        <a href="https://www.python.org/" target="_blank">
+            <img src="{% static 'images/python.svg' %}" alt="python logo">
+        </a>
+        <a href="https://www.typescriptlang.org/" target="_blank">
+            <img src="{% static 'images/ts.webp' %}" alt="typescript logo">
+        </a>
+        <a href="https://nginx.org/" target="_blank">
+            <img src="{% static 'images/nginx.webp' %}" alt="nginx logo">
+        </a>
+        <a href="https://redis.io/" target="_blank">
+            <img src="{% static 'images/redis.svg' %}" alt="redis logo">
+        </a>
+        <a href="https://kubernetes.io/" target="_blank">
+            <img src="{% static 'images/k8s.webp' %}" alt="kubernetes logo">
+        </a>
+        <a href="https://kernel.org/" target="_blank">
+            <img src="{% static 'images/linux.webp' %}" alt="linux logo">
+        </a>
+    </div>
 {% endblock content %}

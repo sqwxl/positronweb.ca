@@ -1,13 +1,45 @@
 {% extends "base_page.html" %}
 
+{% load static %}
+
 {% block content %}
-    <h2>
-        {% trans "Your a business owner?" %}
-    </h2>
+    <hgroup>
+        <img src="{% static 'images/services/www.svg' %}" alt="website outline">
+        <h2>
+            {% trans "Websites" %}
+        </h2>
+    </hgroup>
     <p>
-        {% trans "Wether you need a simple website to present your business or a more complex one with a custom design, we can help you." %}
+        {% trans "Wether you need a website to present your business, an artist's portofolio or a complex project with a custom design, we can help you." %}
+    </p>
+    <hgroup>
+        <h2>
+            {% trans "Applications" %}
+        </h2>
+        <img src="{% static 'images/services/devices.svg' %}"
+             alt="devices outline">
+    </hgroup>
+    <p>
+        {% trans "Mobile apps for iOS & Android as well as cross-platform apps for Windows, MacOS and Linux." %}
+    </p>
+    <hgroup>
+        <img src="{% static 'images/services/shopping.svg' %}"
+             alt="shopping outline">
+        <h2>
+            {% trans "E-Commerce" %}
+        </h2>
+    </hgroup>
+    <p>
+        {% trans "Want to sell stuff online? Cut costs and avoid paying hefty commissions by managing your own online store." %}
     </p>
     <h2>
         {% trans "Something else?" %}
     </h2>
+    <p>
+        <p align="center" style="margin-top: 2em">
+            <a role="button" class="anchor-btn" href="{% url 'contact' %}">
+                {% trans "Tell us about your project!" %}
+            </a>
+        </p>
+    </p>
 {% endblock content %}
