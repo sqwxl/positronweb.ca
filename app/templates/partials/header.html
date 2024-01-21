@@ -12,10 +12,12 @@
 
         }
     </style>
-    <img width="240"
-         height="50"
-         src="{% static 'images/logo.svg' %}"
-         alt="positron">
+    <a href="{% url 'index' %}">
+        <img width="240"
+             height="50"
+             src="{% static 'images/logo.svg' %}"
+             alt="positron">
+    </a>
     <p align="center">
         <small>{% tagline %}</small>
     </p>

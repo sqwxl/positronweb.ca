@@ -2,44 +2,59 @@
 
 {% load static %}
 
+{% block header %}
+{% endblock header %}
+
 {% block content %}
-    <hgroup>
-        <img src="{% static 'images/services/www.svg' %}" alt="website outline">
-        <h2>
-            {% trans "Websites" %}
-        </h2>
-    </hgroup>
-    <p>
-        {% trans "Wether you need a website to present your business, an artist's portofolio or a complex project with a custom design, we can help you." %}
-    </p>
-    <hgroup>
-        <h2>
-            {% trans "Applications" %}
-        </h2>
-        <img src="{% static 'images/services/devices.svg' %}"
-             alt="devices outline">
-    </hgroup>
-    <p>
-        {% trans "Mobile apps for iOS & Android as well as cross-platform apps for Windows, MacOS and Linux." %}
-    </p>
-    <hgroup>
-        <img src="{% static 'images/services/shopping.svg' %}"
-             alt="shopping outline">
-        <h2>
-            {% trans "E-Commerce" %}
-        </h2>
-    </hgroup>
-    <p>
-        {% trans "Want to sell stuff online? Cut costs and avoid paying hefty commissions by managing your own online store." %}
-    </p>
-    <h2>
-        {% trans "Something else?" %}
-    </h2>
-    <p>
-        <p align="center" style="margin-top: 2em">
-            <a role="button" class="anchor-btn" href="{% url 'contact' %}">
-                {% trans "Tell us about your project!" %}
-            </a>
-        </p>
-    </p>
+    <ul class="feature-list">
+        <li>
+            <hgroup>
+                <img src="{% static 'images/services/web_browser.svg' %}" alt="">
+                <h3>
+                    {% trans "Websites" %}
+                </h3>
+            </hgroup>
+            <p>
+                {% trans "Wether you need a website to present your business, an artist's portofolio or a complex project with a custom design, we can help you." %}
+            </p>
+        </li>
+        <li>
+            <hgroup>
+                <h3>
+                    {% trans "Applications" %}
+                </h3>
+                <img src="{% static 'images/services/devices.svg' %}" alt="">
+            </hgroup>
+            <p>
+                {% trans "Mobile apps for iOS & Android as well as cross-platform apps for Windows, MacOS and Linux." %}
+            </p>
+        </li>
+        <li>
+            <hgroup>
+                <img src="{% static 'images/services/basket.svg' %}" alt="">
+                <h3>
+                    {% trans "E-Commerce" %}
+                </h3>
+            </hgroup>
+            <p>
+                {% trans "Want to sell stuff online? Cut costs and avoid paying hefty commissions by managing your own online store." %}
+            </p>
+        </li>
+        <li>
+            <hgroup>
+                <h3>
+                    {% trans "Something else?" %}
+                </h3>
+                <img src="{% static 'images/services/bulb_person.svg' %}" alt="">
+            </hgroup>
+            <p>
+                {% trans "We can build custom software solutions tailored to your specific needs." %}
+            </p>
+            <p align="center" style="margin-top: 2em">
+                <a role="button" class="anchor-btn" href="{% url 'contact' %}">
+                    {% trans "Tell us about your project!" %}
+                </a>
+            </p>
+        </li>
+    </ul>
 {% endblock content %}

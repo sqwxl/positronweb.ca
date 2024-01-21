@@ -7,8 +7,31 @@
    viewBox="0 0 250.84411 52.091758"
    version="1.1"
    id="svg1"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.1401323"
+     inkscape:cx="474.03613"
+     inkscape:cy="98.358407"
+     inkscape:window-width="2560"
+     inkscape:window-height="1371"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g11" />
   <defs
      id="defs1" />
   <g
@@ -35,7 +58,7 @@
          d="m 235.50145,37.359703 q -13.056,0 -20.544,-7.488 -7.296,-7.488 -7.296,-20.3519999 V -85.136297 h 17.664 V 8.3677031 q 0,6.3359999 3.456,10.1759999 3.648,3.648 9.984,3.648 h 19.776 v 15.168 z m -44.736,-82.752 v -15.168 h 68.16 v 15.168 z"
          id="path16" />
       <path
-         style="font-size:192px;font-family:MuseoModerno;-inkscape-font-specification:'MuseoModerno, Normal';letter-spacing:25.3932px;fill:#ff0000;fill-opacity:1;stroke-width:2.64788"
+         style="font-size:192px;font-family:MuseoModerno;-inkscape-font-specification:'MuseoModerno, Normal';letter-spacing:25.3932px;fill:#d40000;fill-opacity:1;stroke-width:2.64788"
          d="m 140.02807,-76.112297 q -4.8,0 -8.448,-3.456 -3.456,-3.648 -3.456,-8.448 0,-4.8 3.456,-8.256 3.648,-3.648 8.448,-3.648 4.8,0 8.256,3.648 3.648,3.456 3.648,8.256 0,4.8 -3.648,8.448 -3.456,3.456 -8.256,3.456 z"
          id="path15" />
       <path

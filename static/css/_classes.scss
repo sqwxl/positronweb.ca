@@ -48,3 +48,25 @@ input[aria-invalid="true"] {
 .htmx-request .htmx-indicator {
   display: block;
 }
+
+.feature-list {
+  margin: 0 0 4rem;
+  padding: 0;
+
+  & li {
+    list-style: none;
+    text-align: center;
+
+    & hgroup {
+      display: flex;
+      font-weight: bold;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        max-height: 6rem;
+        margin: 1rem;
+      }
+    }
+  }
+}

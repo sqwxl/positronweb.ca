@@ -4,29 +4,21 @@
 
 {% block header %}
     <hgroup>
+        <style>
+            me {
+                img {
+                    max-height: 4rem;
+                }
+            }
+        </style>
         <h1>
+            <img src="{% static 'images/contact/plane.svg' %}">
             {% trans "Contact Us" %}
         </h1>
-        <img src="{% static 'images/contact/plane.svg' %}">
     </hgroup>
 {% endblock header %}
 
 {% block content %}
-    <ul>
-        <style>
-            me {
-                li {
-                    list-style: none;
-                }
-            }
-        </style>
-        <li>
-            <a href="mailto:info@positronweb.ca">info@postironweb.ca</a>
-        </li>
-        <li>
-            <a href="tel:438-838-8413">438 838 8413</a> &mdash; <a href="tel:450-604-0334">450 604 0334</a>
-        </li>
-    </ul>
     <p>
         <form method="post" hx-indicator="#submit-btn">
             {% csrf_token %}
@@ -44,4 +36,26 @@
             </button>
         </form>
     </p>
+    <ul>
+        <style>
+            me {
+                padding: 0;
+
+                li {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        </style>
+        <li>
+            <a href="mailto:info@positronweb.ca">info@postironweb.ca</a>
+        </li>
+        <li>
+            <a href="tel:438-838-8413">438 838 8413</a>
+        </li>
+        <li>
+            <a href="tel:450-604-0334">450 604 0334</a>
+        </li>
+    </ul>
 {% endblock content %}

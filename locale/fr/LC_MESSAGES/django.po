@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-18 21:16+0000\n"
+"POT-Creation-Date: 2024-01-21 22:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,58 +42,62 @@ msgstr ""
 "Parlez-nous de votre projet, de votre budget et de la date de lancement "
 "prévue. Nous vous répondrons dès que possible."
 
-#: app/templates/pages/contact.html:8
+#: app/templates/pages/contact.html:16
 msgid "Contact Us"
 msgstr "Contactez-nous"
 
-#: app/templates/pages/contact.html:41
+#: app/templates/pages/contact.html:33
 msgid "Send"
 msgstr "Envoyer"
 
-#: app/templates/pages/index.html:10
-msgid "Why Positron?"
-msgstr "Pourquoi Positron?"
-
-#: app/templates/pages/index.html:30
-msgid "Speed"
-msgstr "Vitesse"
-
-#: app/templates/pages/index.html:34
-msgid "Efficient software that is snappy and responsive"
-msgstr "Logiciels rapides, efficaces et réactifs"
-
-#: app/templates/pages/index.html:40
-msgid "Stability"
-msgstr "Stabilité"
-
-#: app/templates/pages/index.html:45
-msgid ""
-"Built with battle-tested technologies to provide reliable and safe user "
-"experiences"
-msgstr "Construit avec des technologies éprouvées pour des expériences sûres"
-
-#: app/templates/pages/index.html:52
-msgid "Accessibility"
-msgstr "Accessibilité"
-
-#: app/templates/pages/index.html:56
-msgid "Clear, simple and functional designs that are a pleasure to use"
-msgstr ""
-"Des designs clairs, simples et fonctionnels qui sont un plaisir à utiliser"
-
-#: app/templates/pages/index.html:62
+#: app/templates/pages/index.html:11
 msgid "Schedule a free consultation"
 msgstr "Planifiez une consultation gratuite"
 
-#: app/templates/pages/index.html:66
-msgid "Positron uses trusted, open-source tech"
-msgstr "Positron utilise des technologies open-source de confiance"
+#: app/templates/pages/index.html:15
+msgid "Why Positron?"
+msgstr "Pourquoi Positron?"
 
-#: app/templates/pages/services.html:9
+#: app/templates/pages/index.html:21
+msgid "Speed"
+msgstr "Vitesse"
+
+#: app/templates/pages/index.html:26
+msgid "Efficient software that is snappy and responsive."
+msgstr "Logiciels rapides, efficaces et réactifs."
+
+#: app/templates/pages/index.html:33
+msgid "Stability"
+msgstr "Stabilité"
+
+#: app/templates/pages/index.html:37
+msgid ""
+"Built with battle-tested technologies to provide reliable and safe user "
+"experiences."
+msgstr "Construit avec des technologies éprouvées pour des expériences sûres."
+
+#: app/templates/pages/index.html:43
+msgid "Accessibility"
+msgstr "Accessibilité"
+
+#: app/templates/pages/index.html:48
+msgid "Clear, simple and functional designs that are easy to use."
+msgstr ""
+"Des designs clairs, simples et fonctionnels qui sont un faciles à utiliser"
+
+#: app/templates/pages/index.html:55
+msgid "Open-Source Tech"
+msgstr "Technologie open-source"
+
+#: app/templates/pages/index.html:59
+msgid "Take advantage of trusted, community-driven software."
+msgstr "Profitez de logiciels open-source fiables."
+
+#: app/templates/pages/services.html:14
 msgid "Websites"
 msgstr "Sites web"
 
-#: app/templates/pages/services.html:13
+#: app/templates/pages/services.html:18
 msgid ""
 "Wether you need a website to present your business, an artist's portofolio "
 "or a complex project with a custom design, we can help you."
@@ -102,11 +106,11 @@ msgstr ""
 "portofolio d'artiste ou un projet complexe avec un design personnalisé, nous "
 "pouvons vous aider."
 
-#: app/templates/pages/services.html:17
+#: app/templates/pages/services.html:24
 msgid "Applications"
 msgstr ""
 
-#: app/templates/pages/services.html:23
+#: app/templates/pages/services.html:29
 msgid ""
 "Mobile apps for iOS & Android as well as cross-platform apps for Windows, "
 "MacOS and Linux."
@@ -114,11 +118,11 @@ msgstr ""
 "Applications mobiles pour iOS et Android ainsi que des applications "
 "multiplateformes pour Windows, MacOS et Linux."
 
-#: app/templates/pages/services.html:29
+#: app/templates/pages/services.html:36
 msgid "E-Commerce"
 msgstr ""
 
-#: app/templates/pages/services.html:33
+#: app/templates/pages/services.html:40
 msgid ""
 "Want to sell stuff online? Cut costs and avoid paying hefty commissions by "
 "managing your own online store."
@@ -126,33 +130,33 @@ msgstr ""
 "Vous voulez vendre des choses en ligne ? Réduisez les coûts et évitez de "
 "payer des commissions en gérant votre propre boutique en ligne."
 
-#: app/templates/pages/services.html:36
+#: app/templates/pages/services.html:46
 msgid "Something else?"
 msgstr "Autre chose?"
 
-#: app/templates/pages/services.html:41
+#: app/templates/pages/services.html:51
+msgid "We can build custom software solutions tailored to your specific needs."
+msgstr "Nous pouvons créer des solutions logicielles sur mesure selon vos besoins."
+
+#: app/templates/pages/services.html:55
 msgid "Tell us about your project!"
 msgstr "Parlez-nous de votre projet !"
 
-#: app/templates/partials/footer.html:9
+#: app/templates/partials/footer.html:16
 msgid "Copyright Positron 2024"
 msgstr ""
 
-#: app/templates/partials/nav.html:6 app/views.py:12
+#: app/templates/partials/nav.html:6 app/views.py:18
 msgid "Home"
 msgstr "Accueil"
 
-#: app/templates/partials/nav.html:9 app/views.py:16
+#: app/templates/partials/nav.html:9 app/views.py:22
 msgid "Services"
 msgstr ""
 
-#: app/templates/partials/nav.html:12 app/views.py:67
+#: app/templates/partials/nav.html:12 app/views.py:77
 msgid "Contact"
 msgstr ""
-
-#: app/templates/partials/nav.html:15 app/views.py:24
-msgid "About"
-msgstr "À propos"
 
 #: app/templatetags/tagline.py:9
 msgid "The web how it was meant to be"
@@ -222,20 +226,25 @@ msgstr "Octets artisanaux servis sur une palette positronique"
 msgid "Meet the electron's nerdy cousin"
 msgstr "Rencontrez le cousin farfelu de l'électron"
 
-#: app/views.py:20
+#: app/views.py:26
 msgid "Technologies"
 msgstr ""
 
-#: app/views.py:46
+#: app/views.py:30
+msgid "About"
+msgstr "À propos"
+
+#: app/views.py:53
 msgid "Your message has been sent, thank you."
 msgstr "Votre message a été envoyé, merci."
 
-#: app/views.py:53
+#: app/views.py:63
 msgid "There was an error sending your message, please try again."
 msgstr ""
 "Une erreur s'est produite lors de l'envoi de votre message, veuillez "
 "réessayer."
 
-#: app/views.py:59
+#: app/views.py:69
 msgid "There are errors with your submission."
 msgstr "Il y a des erreurs dans votre soumission."
+

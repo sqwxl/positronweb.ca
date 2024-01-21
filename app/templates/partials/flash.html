@@ -38,7 +38,7 @@
                 {% if message.level_tag == "error" %}
                     <img src="{% static 'images/flash/finger_up.svg' %}">
                 {% elif message.level_tag == "success" %}
-                    <img src="{% static 'images/flash/success.svg' %}">
+                    <img src="{% static 'images/flash/sent.svg' %}">
                 {% endif %}
                 <span>{{ message }}</span>
             </li>
