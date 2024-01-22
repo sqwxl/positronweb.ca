@@ -92,7 +92,7 @@ msgstr "Technologie à source ouverte"
 
 #: app/templates/pages/index.html:59
 msgid "Take advantage of trusted, community-driven software."
-msgstr "Profitez de logiciels open-source fiables."
+msgstr "Profitez de logiciels fiables, maintenus par une communauté internationale."
 
 #: app/templates/pages/services.html:14
 msgid "Websites"
