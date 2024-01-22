@@ -74,11 +74,11 @@ msgstr "Construit avec des technologies éprouvées pour des expériences sûres
 
 #: app/templates/pages/index.html:40
 msgid "Security"
-msgstr ""
+msgstr "Securité"
 
 #: app/templates/pages/index.html:45
 msgid "Secure by default to keep you and your client's data safe."
-msgstr ""
+msgstr "Sécurisé par défaut pour protéger vos données et celles de vos clients."
 
 #: app/templates/pages/index.html:52
 msgid "Accessibility"
