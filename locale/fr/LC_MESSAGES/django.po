@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-21 22:59+0000\n"
+"POT-Creation-Date: 2024-01-22 02:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,7 +40,7 @@ msgid ""
 "get back to you ASAP."
 msgstr ""
 "Parlez-nous de votre projet, de votre budget et de la date de lancement "
-"prévue. Nous vous répondrons dès que possible."
+"prévue. Nous vous répondrons dans les plus brefs délais."
 
 #: app/templates/pages/contact.html:16
 msgid "Contact Us"
@@ -83,11 +83,12 @@ msgstr "Accessibilité"
 #: app/templates/pages/index.html:48
 msgid "Clear, simple and functional designs that are easy to use."
 msgstr ""
-"Des designs clairs, simples et fonctionnels qui sont un faciles à utiliser"
+"Des designs clairs, simples et fonctionnels pour une utilisation facile et "
+"agréable."
 
 #: app/templates/pages/index.html:55
-msgid "Open-Source Tech"
-msgstr "Technologie open-source"
+msgid "Open Source Tech"
+msgstr "Technologie à source ouverte"
 
 #: app/templates/pages/index.html:59
 msgid "Take advantage of trusted, community-driven software."
@@ -136,7 +137,8 @@ msgstr "Autre chose?"
 
 #: app/templates/pages/services.html:51
 msgid "We can build custom software solutions tailored to your specific needs."
-msgstr "Nous pouvons créer des solutions logicielles sur mesure selon vos besoins."
+msgstr ""
+"Nous pouvons créer des solutions logicielles sur mesure selon vos besoins."
 
 #: app/templates/pages/services.html:55
 msgid "Tell us about your project!"
@@ -247,4 +249,3 @@ msgstr ""
 #: app/views.py:69
 msgid "There are errors with your submission."
 msgstr "Il y a des erreurs dans votre soumission."
-
