@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-22 02:14+0000\n"
+"POT-Creation-Date: 2024-01-22 21:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,7 +24,7 @@ msgstr "Nom"
 
 #: app/forms.py:11
 msgid "Email"
-msgstr "Adresse e-mail"
+msgstr "Adresse courriel"
 
 #: app/forms.py:14
 msgid "Phone Number (optional)"
@@ -54,45 +54,50 @@ msgstr "Envoyer"
 msgid "Schedule a free consultation"
 msgstr "Planifiez une consultation gratuite"
 
-#: app/templates/pages/index.html:15
-msgid "Why Positron?"
-msgstr "Pourquoi Positron?"
-
-#: app/templates/pages/index.html:21
+#: app/templates/pages/index.html:18
 msgid "Speed"
 msgstr "Vitesse"
 
-#: app/templates/pages/index.html:26
-msgid "Efficient software that is snappy and responsive."
-msgstr "Logiciels rapides, efficaces et réactifs."
+#: app/templates/pages/index.html:23
+msgid "Modern websites that are snappy and responsive."
+msgstr "Sites web modernes, rapides et réactifs."
 
-#: app/templates/pages/index.html:33
+#: app/templates/pages/index.html:30
 msgid "Stability"
 msgstr "Stabilité"
 
-#: app/templates/pages/index.html:37
+#: app/templates/pages/index.html:34
 msgid ""
 "Built with battle-tested technologies to provide reliable and safe user "
 "experiences."
 msgstr "Construit avec des technologies éprouvées pour des expériences sûres."
 
-#: app/templates/pages/index.html:43
+#: app/templates/pages/index.html:40
+msgid "Security"
+msgstr ""
+
+#: app/templates/pages/index.html:45
+msgid "Secure by default to keep you and your client's data safe."
+msgstr ""
+
+#: app/templates/pages/index.html:52
 msgid "Accessibility"
 msgstr "Accessibilité"
 
-#: app/templates/pages/index.html:48
+#: app/templates/pages/index.html:56
 msgid "Clear, simple and functional designs that are easy to use."
 msgstr ""
 "Des designs clairs, simples et fonctionnels pour une utilisation facile et "
 "agréable."
 
-#: app/templates/pages/index.html:55
+#: app/templates/pages/index.html:62
 msgid "Open Source Tech"
 msgstr "Technologie à source ouverte"
 
-#: app/templates/pages/index.html:59
-msgid "Take advantage of trusted, community-driven software."
-msgstr "Profitez de logiciels fiables, maintenus par une communauté internationale."
+#: app/templates/pages/index.html:67
+msgid "Take advantage of trusted, community-driven software:"
+msgstr ""
+"Profitez de logiciels fiables, maintenus par une communauté internationale:"
 
 #: app/templates/pages/services.html:14
 msgid "Websites"
@@ -138,7 +143,7 @@ msgstr "Autre chose?"
 #: app/templates/pages/services.html:51
 msgid "We can build custom software solutions tailored to your specific needs."
 msgstr ""
-"Nous pouvons créer des solutions logicielles sur mesure selon vos besoins."
+"Nous sommes en mesure de créer des solutions logicielles selon vos besoins."
 
 #: app/templates/pages/services.html:55
 msgid "Tell us about your project!"
@@ -194,7 +199,7 @@ msgstr "Artisanat du web avec une touche positive"
 
 #: app/templatetags/tagline.py:17
 msgid "Bit by positronic bit"
-msgstr "Bit par bit positronique"
+msgstr "Positronification imminente!"
 
 #: app/templatetags/tagline.py:18
 msgid "Enjoy a warm cup of positronic tea"

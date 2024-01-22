@@ -11,9 +11,6 @@
             {% trans "Schedule a free consultation" %}
         </a>
     </p>
-    <h2>
-        {% trans "Why Positron?" %}
-    </h2>
     <ul class="feature-list">
         <li>
             <hgroup>
@@ -23,7 +20,7 @@
                 <img src="{% static 'images/index/rocket.svg' %}" alt="">
             </hgroup>
             <p>
-                {% trans "Efficient software that is snappy and responsive." %}
+                {% trans "Modern websites that are snappy and responsive." %}
             </p>
         </li>
         <li>
@@ -40,9 +37,20 @@
         <li>
             <hgroup>
                 <h3>
+                    {% trans "Security" %}
+                </h3>
+                <img src="{% static 'images/index/tower.svg' %}" alt="">
+            </hgroup>
+            <p>
+                {% trans "Secure by default to keep you and your client's data safe." %}
+            </p>
+        </li>
+        <li>
+            <hgroup>
+                <img src="{% static 'images/index/a11y.svg' %}" alt="">
+                <h3>
                     {% trans "Accessibility" %}
                 </h3>
-                <img src="{% static 'images/index/a11y.svg' %}" alt="">
             </hgroup>
             <p>
                 {% trans "Clear, simple and functional designs that are easy to use." %}
@@ -50,13 +58,13 @@
         </li>
         <li>
             <hgroup>
-                <img src="{% static 'images/index/trusted.svg' %}" alt="">
                 <h3>
                     {% trans "Open Source Tech" %}
                 </h3>
+                <img src="{% static 'images/index/trusted.svg' %}" alt="">
             </hgroup>
             <p>
-                {% trans "Take advantage of trusted, community-driven software." %}
+                {% trans "Take advantage of trusted, community-driven software:" %}
             </p>
             <p>
                 <style>
@@ -78,8 +86,8 @@
 
                     @media sm {
                         me {
-                            margin-right: 6em;
-                            margin-left: 6em;
+                            max-width: 50%;
+                            margin: 0 auto;
                         }
                     }
                 </style>
