@@ -11,5 +11,44 @@
         <li>
             <a href="{% url 'contact' %}">{% translate "Contact" %}</a>
         </li>
+        <li>
+            <style>
+                me {
+                    button {
+                        background: none;
+                        border: none;
+                        cursor: pointer;
+                        padding: 0;
+                        margin: 0;
+                        outline: inherit;
+                        font-size: .8em;
+                        color: var(--muted);
+
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            </style>
+            {% get_current_language as LANGUAGE_CODE %}
+            <form action="{% url 'set_language' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden"
+                       name="language"
+                       {% if LANGUAGE_CODE == "fr" %}
+                           value="en"
+                       {% else %}
+                           value="fr"
+                       {% endif %}>
+                <button>
+                    {% if LANGUAGE_CODE == "en" %}
+                        français
+                    {% else %}
+                        english
+                    {% endif %}
+                </button>
+            </form>
+        </li>
     </menu>
 </nav>
