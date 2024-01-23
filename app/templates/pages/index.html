@@ -71,81 +71,96 @@
                     me {
                         display: flex;
                         flex-wrap: wrap;
-                        justify-content: center;
                         align-items: center;
+                        justify-content: center;
+                        column-gap: 4%;
+                        row-gap: 1rem;
 
                         & a {
-                            margin: 0.5rem;
+                            flex-basis: 29%;
                         }
 
                         & img {
-                            max-height: 3rem;
-                            max-width: 5rem;
+                            max-height: 4rem;
                         }
                     }
 
                     @media sm {
                         me {
-                            max-width: 50%;
+                            max-width: 70%;
                             margin: 0 auto;
                         }
                     }
                 </style>
+                <a href="https://www.python.org/" target="_blank">
+                    <img src="{% static 'images/logos/python.svg' %}"
+                         alt="Python"
+                         title="Python">
+                </a>
                 <a href="https://www.djangoproject.com/start/overview" target="_blank">
                     <img src="{% static 'images/logos/django.svg' %}"
                          alt="Django"
                          title="Django">
                 </a>
-                <a href="https://www.postgresql.org/" target="_blank">
-                    <img src="{% static 'images/logos/postgres.webp' %}"
-                         alt="PostgreSQL"
-                         title="PostgreSQL">
+                <a href="https://nodejs.org/en" target="_blank">
+                    <img src="{% static 'images/logos/node.svg' %}"
+                         alt="Node.js"
+                         title="Node.js">
                 </a>
-                <a href="https://www.sqlite.org/index.html" target="_blank">
-                    <img src="{% static 'images/logos/sqlite.webp' %}"
-                         alt="SQLite"
-                         title="SQLite">
-                </a>
-                <a href="https://tailwindcss.com/" target="_blank">
-                    <img src="{% static 'images/logos/tailwindcss.svg' %}"
-                         alt="Tailwindcss"
-                         title="Tailwindcss">
+                <a href="https://www.typescriptlang.org/" target="_blank">
+                    <img src="{% static 'images/logos/ts.svg' %}"
+                         alt="Typescript"
+                         title="Typescript">
                 </a>
                 <a href="https://htmx.org/" target="_blank">
-                    <img src="{% static 'images/logos/htmx.webp' %}" alt="HTMX" title="HTMX">
+                    <img src="{% static 'images/logos/htmx.svg' %}" alt="htmx" title="htmx">
+                </a>
+                <a href="https://react.dev" target="_blank">
+                    <img src="{% static 'images/logos/react.svg' %}"
+                         alt="React.js"
+                         title="React.js">
                 </a>
                 <a href="https://alpinejs.dev/" target="_blank">
                     <img src="{% static 'images/logos/alpinejs.svg' %}"
                          alt="Alpine.js"
                          title="Alpine.js">
                 </a>
-                <a href="https://www.python.org/" target="_blank">
-                    <img src="{% static 'images/logos/python.svg' %}"
-                         alt="Python"
-                         title="Python">
+                <a href="https://tailwindcss.com/" target="_blank">
+                    <img src="{% static 'images/logos/tailwindcss.svg' %}"
+                         alt="Tailwindcss"
+                         title="Tailwindcss">
                 </a>
-                <a href="https://www.typescriptlang.org/" target="_blank">
-                    <img src="{% static 'images/logos/ts.webp' %}"
-                         alt="Typescript"
-                         title="Typescript">
+                <a href="https://sass-lang.com/" target="_blank">
+                    <img src="{% static 'images/logos/sass.svg' %}" alt="Sass" title="Sass">
                 </a>
                 <a href="https://nginx.org/" target="_blank">
-                    <img src="{% static 'images/logos/nginx.webp' %}"
-                         alt="NGINX"
-                         title="NGINX">
+                    <img src="{% static 'images/logos/nginx.svg' %}" alt="NGINX" title="NGINX">
+                </a>
+                <a href="https://www.postgresql.org/" target="_blank">
+                    <img src="{% static 'images/logos/postgresql.svg' %}"
+                         alt="PostgreSQL"
+                         title="PostgreSQL">
+                </a>
+                <a href="https://www.sqlite.org/index.html" target="_blank">
+                    <img src="{% static 'images/logos/sqlite.svg' %}"
+                         alt="SQLite"
+                         title="SQLite">
                 </a>
                 <a href="https://redis.io/" target="_blank">
                     <img src="{% static 'images/logos/redis.svg' %}" alt="Redis" title="Redis">
                 </a>
-                <a href="https://kubernetes.io/" target="_blank">
-                    <img src="{% static 'images/logos/k8s.webp' %}"
-                         alt="Kubernetes"
-                         title="Kubernetes">
+                <a href="https://www.docker.com/" target="_blank">
+                    <img src="{% static 'images/logos/docker.svg' %}"
+                         alt="Docker"
+                         title="Docker">
+                </a>
+                <a href="https://www.terraform.io/" target="_blank">
+                    <img src="{% static 'images/logos/terraform.svg' %}"
+                         alt="Terraform"
+                         title="Terraform">
                 </a>
                 <a href="https://kernel.org/" target="_blank">
-                    <img src="{% static 'images/logos/linux.webp' %}"
-                         alt="Linux"
-                         title="Linux">
+                    <img src="{% static 'images/logos/linux.svg' %}" alt="Linux" title="Linux">
                 </a>
             </p>
         </li>
