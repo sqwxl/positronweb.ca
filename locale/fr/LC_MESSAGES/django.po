@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-22 21:43+0000\n"
+"POT-Creation-Date: 2024-01-23 14:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -78,7 +78,8 @@ msgstr "Securité"
 
 #: app/templates/pages/index.html:45
 msgid "Secure by default to keep you and your client's data safe."
-msgstr "Sécurisé par défaut pour protéger vos données et celles de vos clients."
+msgstr ""
+"Sécurisé par défaut pour protéger vos données et celles de vos clients."
 
 #: app/templates/pages/index.html:52
 msgid "Accessibility"
@@ -105,7 +106,7 @@ msgstr "Sites web"
 
 #: app/templates/pages/services.html:18
 msgid ""
-"Wether you need a website to present your business, an artist's portofolio "
+"Whether you need a website to present your business, an artist's portofolio "
 "or a complex project with a custom design, we can help you."
 msgstr ""
 "Que vous ayez besoin d'un site web pour présenter votre entreprise, un "
