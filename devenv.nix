@@ -21,6 +21,8 @@
 
   difftastic.enable = true;
 
+  devcontainer.enable = true;
+
   pre-commit = {
     excludes = [
       ".*/migrations/.*"
