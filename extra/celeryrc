@@ -1,8 +1,0 @@
-CELERY_BIN="/home/sqwxl/positronweb.ca/.venv/bin/celery"
-CELERY_APP="positron"
-
-CELERYD_LOG_FILE="/var/log/celery/%n%I.log"
-CELERYD_LOG_LEVEL="DEBUG"
-
-CELERYD_OPTS=""
-

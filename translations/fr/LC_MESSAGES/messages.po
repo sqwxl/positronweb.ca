@@ -1,0 +1,237 @@
+# French translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-01 10:31-0400\n"
+"PO-Revision-Date: 2025-06-01 10:43-0400\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: pages/contact.html:18
+msgid "Contact Us"
+msgstr "Contactez-nous"
+
+#: pages/contact.html:28
+msgid "Name"
+msgstr "Nom"
+
+#: templates/contact.html:34
+msgid "Email"
+msgstr "Adresse courriel"
+
+#: templates/contact.html:40
+msgid "Phone number (optional)"
+msgstr "Numéro de téléphone (facultatif)"
+
+#: pages/contact.html:51
+msgid ""
+"Tell us about your project, your budget and your target launch date. "
+"We'll get back to you ASAP."
+msgstr ""
+"Parlez-nous de votre projet, de votre budget et de la date de lancement "
+"prévue. Nous vous répondrons dans les plus brefs délais."
+
+#: pages/contact.html:57
+msgid "Send"
+msgstr "Envoyer"
+
+#: templates/index.html:10
+msgid "Schedule a free consultation"
+msgstr "Planifiez une consultation gratuite"
+
+#: templates/index.html:17
+msgid "Speed"
+msgstr "Vitesse"
+
+#: templates/index.html:22
+msgid "Modern websites that are snappy and responsive."
+msgstr "Sites web modernes, rapides et réactifs."
+
+#: templates/index.html:29
+msgid "Stability"
+msgstr "Stabilité"
+
+#: templates/index.html:33
+msgid ""
+"Built with battle-tested technologies to provide reliable and safe user "
+"experiences."
+msgstr "Construit avec des technologies éprouvées pour des expériences sûres."
+
+#: templates/index.html:39
+msgid "Security"
+msgstr "Securité"
+
+#: templates/index.html:44
+msgid "Secure by default to keep you and your client's data safe."
+msgstr "Sécurisé par défaut pour protéger vos données et celles de vos clients."
+
+#: templates/index.html:51
+msgid "Accessibility"
+msgstr "Accessibilité"
+
+#: templates/index.html:55
+msgid "Clear, simple and functional designs that are easy to use."
+msgstr ""
+"Des designs clairs, simples et fonctionnels pour une utilisation facile "
+"et agréable."
+
+#: templates/index.html:61
+msgid "Open Source Tech"
+msgstr "Technologie à source ouverte"
+
+#: templates/index.html:66
+msgid "Take advantage of trusted, community-driven software"
+msgstr ""
+"Profitez de logiciels fiables, maintenus par une communauté "
+"internationale:"
+
+#: pages/services.html:13
+msgid "Websites"
+msgstr "Sites web"
+
+#: pages/services.html:17
+msgid ""
+"Whether you need a website to present your business, an artist's "
+"portofolio or a complex project with a custom design, we can help you."
+msgstr ""
+"Que vous ayez besoin d'un site web pour présenter votre entreprise, un "
+"portofolio d'artiste ou un projet complexe avec un design personnalisé, "
+"nous pouvons vous aider."
+
+#: pages/services.html:23
+msgid "Applications"
+msgstr ""
+
+#: pages/services.html:28
+msgid ""
+"Mobile apps for iOS & Android as well as cross-platform apps for Windows,"
+" MacOS and Linux."
+msgstr ""
+"Applications mobiles pour iOS et Android ainsi que des applications "
+"multiplateformes pour Windows, MacOS et Linux."
+
+#: pages/services.html:35
+msgid "E-Commerce"
+msgstr ""
+
+#: pages/services.html:39
+msgid ""
+"Want to sell stuff online? Cut costs and avoid paying hefty commissions "
+"by managing your own online store."
+msgstr ""
+"Vous voulez vendre des choses en ligne ? Réduisez les coûts et évitez de "
+"payer des commissions en gérant votre propre boutique en ligne."
+
+#: pages/services.html:45
+msgid "Something else?"
+msgstr "Autre chose?"
+
+#: pages/services.html:50
+msgid "We can build custom software solutions tailored to your specific needs."
+msgstr ""
+"Nous sommes en mesure de créer des solutions logicielles selon vos "
+"besoins."
+
+#: pages/services.html:54
+msgid "Tell us about your project!"
+msgstr "Parlez-nous de votre projet !"
+
+#: templates/base.html:43
+msgid "The web how it was meant to be"
+msgstr "Le web tel qu'il est censé être"
+
+#: templates/base.html:44
+msgid "The snippy, snappy subatomic particle"
+msgstr "La particule subatomique pétillante"
+
+#: templates/base.html:45
+msgid "The web artisans"
+msgstr "Les artisans du web"
+
+#: templates/base.html:46
+msgid "Simple, reliable, and fast"
+msgstr "Simple, fiable et rapide"
+
+#: templates/base.html:47
+msgid "Your new favorite antiparticle"
+msgstr "Votre nouvelle antiparticule préférée"
+
+#: templates/base.html:48
+msgid "Where technology meets craftsmanship"
+msgstr "Là où la technologie rencontre l'artisanat"
+
+#: templates/base.html:49
+msgid "Powered by positronic brains"
+msgstr "Alimenté par des cerveaux positroniques"
+
+#: templates/base.html:50
+msgid "Web crafting with a positive spin"
+msgstr "Artisanat du web avec une touche positive"
+
+#: templates/base.html:51
+msgid "Bit by positronic bit"
+msgstr "Positronification imminente!"
+
+#: templates/base.html:52
+msgid "Enjoy a warm cup of positronic tea"
+msgstr "Dégustez une tasse de thé positronique"
+
+#: templates/base.html:53
+msgid "Positronic precision in every pixel"
+msgstr "Précision positronique dans chaque pixel"
+
+#: templates/base.html:54
+msgid "Positive design, positive impact"
+msgstr "Design positif, impact positif"
+
+#: templates/base.html:55
+msgid "The positively powerful positronic web experience"
+msgstr "L'expérience web positivement positronique"
+
+#: templates/base.html:56
+msgid "Infused with positively charged particles"
+msgstr "Infusé de particules chargées positivement"
+
+#: templates/base.html:57
+msgid "Thunderstruck by a bolt of positronic lightning"
+msgstr "Foudroyé par un éclair positronique"
+
+#: templates/base.html:58
+msgid "Artisanal bytes served up on a positronic palette"
+msgstr "Octets artisanaux servis sur une palette positronique"
+
+#: templates/base.html:59
+msgid "Meet the electron's nerdy cousin"
+msgstr "Rencontrez le cousin farfelu de l'électron"
+
+#: templates/base.html:68
+msgid "Home"
+msgstr "Accueil"
+
+#: templates/base.html:71
+msgid "Services"
+msgstr ""
+
+#: templates/base.html:74
+msgid "Contact"
+msgstr ""
+
+#: templates/base.html:104
+msgid "Français"
+msgstr "English"
+
+#: templates/base.html:144
+msgid "Copyright Positron 2025"
+msgstr ""
+

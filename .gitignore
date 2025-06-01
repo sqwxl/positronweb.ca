@@ -1,19 +1,3 @@
-
-# Devenv
-.devenv/
-devenv.local.nix
-.devenv.flake.nix
-
-# direnv
-.direnv/
-
-# pre-commit
-.pre-commit-config.yaml
-
-# artifacts
-_static/
-.ruff_cache/
+output/
+.venv/
 __pycache__/
-.envrc
-debug.log
-.env

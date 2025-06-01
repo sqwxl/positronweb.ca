@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="Positron Web">
+        <meta name="keywords" content="web,development,agency,software,consultant">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="referrer" content="same-origin" />
+        <link rel="preload"
+              href="{{ main_siteurl }}/images/bubble_chamber-666x2048.webp"
+              as="image"
+              type="image/webp" />
+        <link rel="stylesheet" href="{{ main_siteurl }}/stylesheet.css" />
+        <script src="https://cdn.jsdelivr.net/gh/gnat/css-scope-inline@main/script.js"></script>
+        <title>
+
+            {% block title %}
+                - Positron
+            {% endblock title %}
+
+        </title>
+    </head>
+    <body>
+        <header>
+            <style>
+                me {
+                    grid-column: 1/-1;
+                    padding: 4rem 0 1rem;
+
+                    img {
+                        width: 240px;
+                    }
+
+                }
+            </style>
+            <a href="{{ SITEURL }}">
+                <img width="240"
+                     height="50"
+                     src="{{ main_siteurl }}/images/logo.svg"
+                     alt="Positron">
+            </a>
+            <p align="center">
+                <small id="tagline"></small>
+                <script>
+                    var taglines = ["{% trans %}The web how it was meant to be{% endtrans %}",
+                        "{% trans %}The snippy, snappy subatomic particle{% endtrans %}",
+                        "{% trans %}The web artisans{% endtrans %}",
+                        "{% trans %}Simple, reliable, and fast{% endtrans %}",
+                        "{% trans %}Your new favorite antiparticle{% endtrans %}",
+                        "{% trans %}Where technology meets craftsmanship{% endtrans %}",
+                        "{% trans %}Powered by positronic brains{% endtrans %}",
+                        "{% trans %}Web crafting with a positive spin{% endtrans %}",
+                        "{% trans %}Bit by positronic bit{% endtrans %}",
+                        "{% trans %}Enjoy a warm cup of positronic tea{% endtrans %}",
+                        "{% trans %}Positronic precision in every pixel{% endtrans %}",
+                        "{% trans %}Positive design, positive impact{% endtrans %}",
+                        "{% trans %}The positively powerful positronic web experience{% endtrans %}",
+                        "{% trans %}Infused with positively charged particles{% endtrans %}",
+                        "{% trans %}Thunderstruck by a bolt of positronic lightning{% endtrans %}",
+                        "{% trans %}Artisanal bytes served up on a positronic palette{% endtrans %}",
+                        "{% trans %}Meet the electron's nerdy cousin{% endtrans %}"
+                    ]
+
+                    document.getElementById("tagline").innerHTML = taglines[Math.floor(Math.random() * taglines.length)]
+                </script>
+            </p>
+            <nav>
+                <menu>
+                    <li>
+                        <a href="{{ SITEURL }}/">{% trans %}Home{% endtrans %}</a>
+                    </li>
+                    <li>
+                        <a href="{{ SITEURL }}/services">{% trans %}Services{% endtrans %}</a>
+                    </li>
+                    <li>
+                        <a href="{{ SITEURL }}/contact">{% trans %}Contact{% endtrans %}</a>
+                    </li>
+                    <li>
+                        <style>
+                            me {
+                                button {
+                                    background: none;
+                                    border: none;
+                                    cursor: pointer;
+                                    padding: 0;
+                                    margin: 0;
+                                    outline: inherit;
+                                    font-size: .8em;
+                                    color: var(--muted);
+
+
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                        </style>
+                        <a href="{{ lang_siteurls['fr' if DEFAULT_LANG == 'en' else 'en'] }}/{{ page_name if page_name != 'index' else '' }}">
+                            <style>
+                                me,
+                                me:visited {
+                                    text-decoration: none;
+                                }
+                            </style>
+                            <button>
+                                {% trans %}Français{% endtrans %}
+                            </button>
+                        </a>
+                    </li>
+                </menu>
+            </nav>
+        </header>
+        <main>
+            <style>
+                me {
+                    grid-column: 2;
+                }
+            </style>
+            <article>
+                <hgroup>
+
+                    {% block header %}
+                    {% endblock header %}
+
+                </hgroup>
+                <div>
+
+                    {% block content %}
+                    {% endblock content %}
+
+                </div>
+            </article>
+        </main>
+        <footer>
+            <style>
+                me {
+                    grid-column: 1/-1;
+                    margin-top: 4rem;
+
+                    img {
+                        width: 3rem;
+                    }
+                }
+            </style>
+            <p align="center">
+                {% trans %}Copyright Positron 2025{% endtrans %}
+            </p>
+        </footer>
+    </body>
+</html>

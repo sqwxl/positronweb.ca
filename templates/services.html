@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Services {{ super() }}
+{% endblock title %}
+
+{% block content %}
+    <ul class="feature-list">
+        <li>
+            <hgroup>
+                <img src="{{ main_siteurl }}/images/services/web_browser.svg" alt="">
+                <h3>
+                    {% trans %}Websites{% endtrans %}
+                </h3>
+            </hgroup>
+            <p>
+                {% trans %}Whether you need a website to present your business, an artist's portofolio or a complex project with a custom design, we can help you.{% endtrans %}
+            </p>
+        </li>
+        <li>
+            <hgroup>
+                <h3>
+                    {% trans %}Applications{% endtrans %}
+                </h3>
+                <img src="{{ main_siteurl }}/images/services/devices.svg" alt="">
+            </hgroup>
+            <p>
+                {% trans %}Mobile apps for iOS & Android as well as cross-platform apps for Windows, MacOS and Linux.{% endtrans %}
+            </p>
+        </li>
+        <li>
+            <hgroup>
+                <img src="{{ main_siteurl }}/images/services/basket.svg" alt="">
+                <h3>
+                    {% trans %}E-Commerce{% endtrans %}
+                </h3>
+            </hgroup>
+            <p>
+                {% trans %}Want to sell stuff online? Cut costs and avoid paying hefty commissions by managing your own online store.{% endtrans %}
+            </p>
+        </li>
+        <li>
+            <hgroup>
+                <h3>
+                    {% trans %}Something else?{% endtrans %}
+                </h3>
+                <img src="{{ main_siteurl }}/images/services/bulb_person.svg" alt="">
+            </hgroup>
+            <p>
+                {% trans %}We can build custom software solutions tailored to your specific needs.{% endtrans %}
+            </p>
+            <p align="center" style="margin-top: 2em">
+                <a role="button" class="anchor-btn" href="{{ SITEURL }}/contact">
+                    {% trans %}Tell us about your project!{% endtrans %}
+                </a>
+            </p>
+        </li>
+    </ul>
+{% endblock content %}
