@@ -18,7 +18,9 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::036657713000:role/PositronGitHubRole
           aws-region: ${{ env.AWS_REGION }}
-      # Upload a file to AWS s3
+      - name: Inject Lambda contact form URL
+        run: |
+          sed -i 's|PLACEHOLDER_CONTACT_URL|${{ secrets.CONTACT_ENDPOINT }}|' ./public/**/contact.html
       - name: Copy index.html to s3
         run: |
           aws s3 cp ./public s3://${{ env.BUCKET_NAME }}/ --recursive
