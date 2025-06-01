@@ -1,0 +1,24 @@
+name: update-s3
+on:
+  push
+env:
+  BUCKET_NAME: positronweb.ca
+  AWS_REGION: us-east-1
+permissions:
+  id-token: write
+  contents: read
+jobs:
+  S3PackageUpload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git clone the repository
+        uses: actions/checkout@v4
+      - name: configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::036657713000:role/PositronGitHubRole
+          aws-region: ${{ env.AWS_REGION }}
+      # Upload a file to AWS s3
+      - name: Copy index.html to s3
+        run: |
+          aws s3 cp ./public/* s3://${{ env.BUCKET_NAME }}/
