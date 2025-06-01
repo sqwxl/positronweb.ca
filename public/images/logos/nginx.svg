@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Art"
+   viewBox="0 0 135.30819 59.762162"
+   version="1.1"
+   sodipodi:docname="nginx.svg"
+   width="135.3082"
+   height="59.762161"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview11"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="6.551238"
+     inkscape:cx="101.43121"
+     inkscape:cy="29.841688"
+     inkscape:window-width="2560"
+     inkscape:window-height="1371"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Art" />
+  <defs
+     id="defs1">
+    <style
+       id="style1">.cls-1{fill:#999;}.cls-2{fill:#009639;}.cls-3{fill:#fff;}</style>
+  </defs>
+  <title
+     id="title1">NGINX-Part-of-F5-horiz-black-type-RGB</title>
+  <path
+     class="cls-2"
+     d="m 0.40788011,44.82252 a 3.01888,3.01888 0 0 0 1.13415999,1.12547 l 23.2017699,13.39555 7.3e-4,-7.2e-4 a 3.04445,3.04445 0 0 0 3.08381,0 l 23.2025,-13.39555 a 3.04264,3.04264 0 0 0 1.54118,-2.66955 V 16.48661 l -7.2e-4,-7.2e-4 A 3.0436,3.0436 0 0 0 51.0294,13.81562 L 27.82691,0.42007961 v -7.4e-4 a 3.04048,3.04048 0 0 0 -3.08165,0 v 7.4e-4 L 1.5434901,13.81562 A 3.04231,3.04231 0 0 0 8.6011308e-4,16.48589 l -7.2e-4,7.2e-4 V 43.27772 A 3.02484,3.02484 0 0 0 0.40714011,44.82252"
+     id="path8" />
+  <path
+     class="cls-3"
+     d="m 18.8574,40.08056 a 2.98387,2.98387 0 0 1 -5.96774,0 l 7.3e-4,7.2e-4 0.0029,-20.483 a 3.11074,3.11074 0 0 1 3.388,-2.89913 5.30625,5.30625 0 0 1 4.06733,1.81856 l 0.90168,1.07912 12.46563,14.91794 V 19.6816 h -0.0014 a 2.98387,2.98387 0 1 1 5.96774,0 h -7.2e-4 l -0.003,20.48148 a 3.11118,3.11118 0 0 1 -3.388,2.89914 5.30274,5.30274 0 0 1 -4.06734,-1.81857 L 18.85595,25.24666 v 14.83462 z"
+     id="path9" />
+  <polygon
+     points="133.513,29.707 127.385,39.968 131.261,39.968 135.565,33.042 139.784,39.968 143.86,39.968 137.731,29.964 144.002,19.788 140.069,19.788 135.736,26.657 131.518,19.788 127.442,19.788 "
+     id="polygon9"
+     transform="translate(-8.6937985)" />
+  <polygon
+     points="114.436,39.968 114.436,26.315 122.36,39.968 125.667,39.968 125.667,19.788 122.36,19.788 122.36,33.527 114.436,19.788 111.158,19.788 111.158,39.968 "
+     id="polygon10"
+     transform="translate(-8.6937985)" />
+  <rect
+     x="96.262039"
+     y="19.787661"
+     width="3.50613"
+     height="20.18067"
+     id="rect10" />
+  <path
+     d="m 93.565601,26.97054 v -1.14006 c 0,-3.90495 -2.87881,-6.44192 -7.92413,-6.44192 -5.01668,0 -7.8955,2.537 -7.8955,6.44192 v 8.09505 c 0,3.90524 2.90746,6.44192 7.92414,6.44192 5.01668,0 7.89549,-2.53668 7.89549,-6.44192 v -4.73151 h -8.03807 v 3.24929 h 4.53225 v 1.28266 c 0,2.10953 -1.59616,3.39219 -4.41831,3.39219 -2.7932,0 -4.38937,-1.28266 -4.38937,-3.39219 v -7.69589 c 0,-2.10922 1.59617,-3.39187 4.418,-3.39187 2.79351,0 4.38967,1.28265 4.38967,3.39187 v 0.94051 z"
+     id="path10" />
+  <polygon
+     points="72.496,39.968 72.496,26.315 80.42,39.968 83.726,39.968 83.726,19.788 80.42,19.788 80.42,33.527 72.496,19.788 69.218,19.788 69.218,39.968 "
+     id="polygon11"
+     transform="translate(-8.6937985)" />
+  <metadata
+     id="metadata11">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>NGINX-Part-of-F5-horiz-black-type-RGB</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
