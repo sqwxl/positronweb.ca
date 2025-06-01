@@ -1,9 +1,7 @@
 {% extends "base.html" %}
-
 {% block title %}
     Contact {{ super() }}
 {% endblock title %}
-
 {% block header %}
     <hgroup>
         <style>
@@ -19,32 +17,23 @@
         </h1>
     </hgroup>
 {% endblock header %}
-
 {% block content %}
     <p>
-        <form method="post" action="/TODO-AWS-SES">
+        <form method="post" action="PLACEHOLDER_CONTACT_URL">
             <div>
-                <label for="id_name">
-                    {% trans %}Name{% endtrans %}
-                </label>
+                <label for="id_name">{% trans %}Name{% endtrans %}</label>
                 <input type="text" name="name" maxlength="100" required id="id_name">
             </div>
             <div>
-                <label for="id_email">
-                    {% trans %}Email{% endtrans %}
-                </label>
+                <label for="id_email">{% trans %}Email{% endtrans %}</label>
                 <input type="email" name="email" maxlength="320" required id="id_email">
             </div>
             <div>
-                <label for="id_number">
-                    {% trans %}Phone number (optional){% endtrans %}
-                </label>
+                <label for="id_number">{% trans %}Phone number (optional){% endtrans %}</label>
                 <input type="tel" name="number" id="id_number">
             </div>
             <div>
-                <label for="id_message">
-                    Message
-                </label>
+                <label for="id_message">Message</label>
                 <textarea name="message"
                           cols="40"
                           rows="10"
@@ -53,9 +42,7 @@
                           id="id_message"></textarea>
             </div>
             <button>
-                <span>
-                    {% trans %}Send{% endtrans %}
-                </span>
+                <span>{% trans %}Send{% endtrans %}</span>
             </button>
         </form>
     </p>
