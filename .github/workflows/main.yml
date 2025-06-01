@@ -21,6 +21,6 @@ jobs:
       - name: Inject Lambda contact form URL
         run: |
           sed -i 's|PLACEHOLDER_CONTACT_URL|${{ secrets.CONTACT_ENDPOINT }}|' ./public/**/contact.html
-      - name: Copy index.html to s3
+      - name: Copy static site to
         run: |
           aws s3 cp ./public s3://${{ env.BUCKET_NAME }}/ --recursive
