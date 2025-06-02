@@ -62,13 +62,13 @@
         <nav>
             <menu>
                 <li>
-                    <a href="{{ SITEURL }}/" data-link>{% trans %}Home{% endtrans %}</a>
+                    <a href="/" data-link>{% trans %}Home{% endtrans %}</a>
                 </li>
                 <li>
-                    <a href="{{ SITEURL }}/services" data-link>{% trans %}Services{% endtrans %}</a>
+                    <a href="/services" data-link>{% trans %}Services{% endtrans %}</a>
                 </li>
                 <li>
-                    <a href="{{ SITEURL }}/contact" data-link>{% trans %}Contact{% endtrans %}</a>
+                    <a href="/contact" data-link>{% trans %}Contact{% endtrans %}</a>
                 </li>
                 <li>
                     <a id="translate" data-link>
@@ -127,26 +127,26 @@
         const currentLang = "{{ lang }}";
         const otherLang = "{{ other_lang }}";
         const routes = {
-            "/": "home",
-            "/services": "services",
-            "/contact": "contact",
-            "/fr/": "home",
-            "/fr/services": "services",
-            "/fr/contact": "contact",
+            "": "home",
+            "services": "services",
+            "contact": "contact",
         };
 
-        function getSection() {
-            return location.pathname.replace(/^\/(fr)?\/?/, "") || "";
+        function getCurrentSection() {
+            return location.pathname.replace(/(?:^\/(fr\/)?)|(?:\/$)/g, "") || "";
+        }
+
+        function fullPath(prefix, section) {
+            return `/${prefix}/${section}/`.replace(/\/{2,}/, "/");
         }
 
         function navigate(path) {
-            console.log(path);
             history.pushState({}, "", path);
             render();
         }
 
         function render() {
-            const pageId = routes[location.pathname] || "home";
+            const pageId = routes[getCurrentSection()] || "home";
             document
                 .querySelectorAll("main > section")
                 .forEach((el) => el.classList.toggle("hidden", el.id !== pageId));
@@ -155,15 +155,16 @@
         document.querySelectorAll("a[data-link]").forEach((link) =>
             link.addEventListener("click", (e) => {
                 e.preventDefault();
-                let href = link.getAttribute("href");
 
                 if (e.currentTarget.id === "translate") {
-                    section = getSection();
-                    location.href = `${otherLang}/${section}/`.replace(/\/{2,}/, "/");
+                    section = getCurrentSection();
+                    location.href = fullPath(otherLang, section)
                     return;
                 }
 
-                navigate(href);
+                let href = link.getAttribute("href");
+
+                navigate(fullPath(currentLang, href));
             }),
         );
 
