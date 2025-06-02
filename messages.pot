@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-06-01 10:44-0400\n"
+"POT-Creation-Date: 2025-06-01 20:55-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,205 +17,209 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: pages/contact.html:18
+#: templates/base.html:45
+msgid "The web how it was meant to be"
+msgstr ""
+
+#: templates/base.html:46
+msgid "The snippy, snappy subatomic particle"
+msgstr ""
+
+#: templates/base.html:47
+msgid "The web artisans"
+msgstr ""
+
+#: templates/base.html:48
+msgid "Simple, reliable, and fast"
+msgstr ""
+
+#: templates/base.html:49
+msgid "Your new favorite antiparticle"
+msgstr ""
+
+#: templates/base.html:50
+msgid "Where technology meets craftsmanship"
+msgstr ""
+
+#: templates/base.html:51
+msgid "Powered by positronic brains"
+msgstr ""
+
+#: templates/base.html:52
+msgid "Web crafting with a positive spin"
+msgstr ""
+
+#: templates/base.html:53
+msgid "Bit by positronic bit"
+msgstr ""
+
+#: templates/base.html:54
+msgid "Enjoy a warm cup of positronic tea"
+msgstr ""
+
+#: templates/base.html:55
+msgid "Positronic precision in every pixel"
+msgstr ""
+
+#: templates/base.html:56
+msgid "Positive design, positive impact"
+msgstr ""
+
+#: templates/base.html:57
+msgid "The positively powerful positronic web experience"
+msgstr ""
+
+#: templates/base.html:58
+msgid "Infused with positively charged particles"
+msgstr ""
+
+#: templates/base.html:59
+msgid "Thunderstruck by a bolt of positronic lightning"
+msgstr ""
+
+#: templates/base.html:60
+msgid "Artisanal bytes served up on a positronic palette"
+msgstr ""
+
+#: templates/base.html:61
+msgid "Meet the electron's nerdy cousin"
+msgstr ""
+
+#: templates/base.html:70
+msgid "Home"
+msgstr ""
+
+#: templates/base.html:73
+msgid "Services"
+msgstr ""
+
+#: templates/base.html:76
+msgid "Contact"
+msgstr ""
+
+#: templates/base.html:106
+msgid "Français"
+msgstr ""
+
+#: templates/base.html:146
+msgid "Copyright Positron 2025"
+msgstr ""
+
+#: templates/contact.html:16
 msgid "Contact Us"
 msgstr ""
 
-#: pages/contact.html:28
+#: templates/contact.html:24
 msgid "Name"
 msgstr ""
 
-#: pages/contact.html:34
+#: templates/contact.html:28
 msgid "Email"
 msgstr ""
 
-#: pages/contact.html:40
+#: templates/contact.html:32
 msgid "Phone number (optional)"
 msgstr ""
 
-#: pages/contact.html:51
+#: templates/contact.html:40
 msgid ""
 "Tell us about your project, your budget and your target launch date. "
 "We'll get back to you ASAP."
 msgstr ""
 
-#: pages/contact.html:57
+#: templates/contact.html:45
 msgid "Send"
 msgstr ""
 
-#: pages/index.html:10
+#: templates/contact.html:50
+msgid "Thank you for your message. We'll be in touch with you shortly."
+msgstr ""
+
+#: templates/index.html:10
 msgid "Schedule a free consultation"
 msgstr ""
 
-#: pages/index.html:17
+#: templates/index.html:17
 msgid "Speed"
 msgstr ""
 
-#: pages/index.html:22
+#: templates/index.html:22
 msgid "Modern websites that are snappy and responsive."
 msgstr ""
 
-#: pages/index.html:29
+#: templates/index.html:29
 msgid "Stability"
 msgstr ""
 
-#: pages/index.html:33
+#: templates/index.html:33
 msgid ""
 "Built with battle-tested technologies to provide reliable and safe user "
 "experiences."
 msgstr ""
 
-#: pages/index.html:39
+#: templates/index.html:39
 msgid "Security"
 msgstr ""
 
-#: pages/index.html:44
+#: templates/index.html:44
 msgid "Secure by default to keep you and your client's data safe."
 msgstr ""
 
-#: pages/index.html:51
+#: templates/index.html:51
 msgid "Accessibility"
 msgstr ""
 
-#: pages/index.html:55
+#: templates/index.html:55
 msgid "Clear, simple and functional designs that are easy to use."
 msgstr ""
 
-#: pages/index.html:61
+#: templates/index.html:61
 msgid "Open Source Tech"
 msgstr ""
 
-#: pages/index.html:66
+#: templates/index.html:66
 msgid "Take advantage of trusted, community-driven software"
 msgstr ""
 
-#: pages/services.html:13
+#: templates/services.html:13
 msgid "Websites"
 msgstr ""
 
-#: pages/services.html:17
+#: templates/services.html:17
 msgid ""
 "Whether you need a website to present your business, an artist's "
 "portofolio or a complex project with a custom design, we can help you."
 msgstr ""
 
-#: pages/services.html:23
+#: templates/services.html:23
 msgid "Applications"
 msgstr ""
 
-#: pages/services.html:28
+#: templates/services.html:28
 msgid ""
 "Mobile apps for iOS & Android as well as cross-platform apps for Windows,"
 " MacOS and Linux."
 msgstr ""
 
-#: pages/services.html:35
+#: templates/services.html:35
 msgid "E-Commerce"
 msgstr ""
 
-#: pages/services.html:39
+#: templates/services.html:39
 msgid ""
 "Want to sell stuff online? Cut costs and avoid paying hefty commissions "
 "by managing your own online store."
 msgstr ""
 
-#: pages/services.html:45
+#: templates/services.html:45
 msgid "Something else?"
 msgstr ""
 
-#: pages/services.html:50
+#: templates/services.html:50
 msgid "We can build custom software solutions tailored to your specific needs."
 msgstr ""
 
-#: pages/services.html:54
+#: templates/services.html:54
 msgid "Tell us about your project!"
-msgstr ""
-
-#: templates/base.html:43
-msgid "The web how it was meant to be"
-msgstr ""
-
-#: templates/base.html:44
-msgid "The snippy, snappy subatomic particle"
-msgstr ""
-
-#: templates/base.html:45
-msgid "The web artisans"
-msgstr ""
-
-#: templates/base.html:46
-msgid "Simple, reliable, and fast"
-msgstr ""
-
-#: templates/base.html:47
-msgid "Your new favorite antiparticle"
-msgstr ""
-
-#: templates/base.html:48
-msgid "Where technology meets craftsmanship"
-msgstr ""
-
-#: templates/base.html:49
-msgid "Powered by positronic brains"
-msgstr ""
-
-#: templates/base.html:50
-msgid "Web crafting with a positive spin"
-msgstr ""
-
-#: templates/base.html:51
-msgid "Bit by positronic bit"
-msgstr ""
-
-#: templates/base.html:52
-msgid "Enjoy a warm cup of positronic tea"
-msgstr ""
-
-#: templates/base.html:53
-msgid "Positronic precision in every pixel"
-msgstr ""
-
-#: templates/base.html:54
-msgid "Positive design, positive impact"
-msgstr ""
-
-#: templates/base.html:55
-msgid "The positively powerful positronic web experience"
-msgstr ""
-
-#: templates/base.html:56
-msgid "Infused with positively charged particles"
-msgstr ""
-
-#: templates/base.html:57
-msgid "Thunderstruck by a bolt of positronic lightning"
-msgstr ""
-
-#: templates/base.html:58
-msgid "Artisanal bytes served up on a positronic palette"
-msgstr ""
-
-#: templates/base.html:59
-msgid "Meet the electron's nerdy cousin"
-msgstr ""
-
-#: templates/base.html:68
-msgid "Home"
-msgstr ""
-
-#: templates/base.html:71
-msgid "Services"
-msgstr ""
-
-#: templates/base.html:74
-msgid "Contact"
-msgstr ""
-
-#: templates/base.html:104
-msgid "Français"
-msgstr ""
-
-#: templates/base.html:144
-msgid "Copyright Positron 2025"
 msgstr ""
 

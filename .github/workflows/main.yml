@@ -1,4 +1,4 @@
-name: update-s3
+name: Publish
 on:
   push
 env:
@@ -13,14 +13,23 @@ jobs:
     steps:
       - name: Git clone the repository
         uses: actions/checkout@v4
-      - name: configure aws credentials
+      - name: Configure aws credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::036657713000:role/PositronGitHubRole
           aws-region: ${{ env.AWS_REGION }}
+      - name: Setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: 'pip' # caching pip dependencies
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Compile translations
+        run: pybabel compile --directory translations/ --domain messages
+      - name: Generate static site
+        run: pelican --settings publishconf.py --quiet --output public
       - name: Inject Lambda contact form URL
-        run: |
-          sed -i 's|PLACEHOLDER_CONTACT_URL|${{ secrets.CONTACT_ENDPOINT }}|' ./public/contact.html ./public/fr/contact.html
-      - name: Copy static site to
-        run: |
-          aws s3 cp ./public s3://${{ env.BUCKET_NAME }}/ --recursive
+        run: sed -i 's|PLACEHOLDER_CONTACT_URL|${{ secrets.CONTACT_ENDPOINT }}|' ./public/contact.html ./public/fr/contact.html
+      - name: Upload to S3
+        run: aws s3 cp ./public s3://${{ env.BUCKET_NAME }}/ --recursive

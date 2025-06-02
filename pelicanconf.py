@@ -25,3 +25,5 @@ AUTHOR_FEED_RSS = None
 # Disable tags
 TAGS_SAVE_AS = ""
 TAG_SAVE_AS = ""
+
+DELETE_OUTPUT_DIRECTORY = True

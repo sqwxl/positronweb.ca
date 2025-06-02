@@ -45,6 +45,11 @@
                 <span>{% trans %}Send{% endtrans %}</span>
             </button>
         </form>
+        <script>
+            document.querySelector("form").addEventListener("submit", event => { 
+                event.currentTarget.outerHTML = "<h3>{% trans %}Thank you for your message. We'll be in touch with you shortly.{% endtrans %}</h3>"
+            })
+        </script>
     </p>
     <ul>
         <style>
