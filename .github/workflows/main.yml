@@ -33,3 +33,5 @@ jobs:
         run: sed -i 's|PLACEHOLDER_CONTACT_URL|${{ secrets.CONTACT_ENDPOINT }}|' ./public/index.html ./public/fr/index.html
       - name: Upload to S3
         run: aws s3 cp ./public s3://${{ env.BUCKET_NAME }}/ --recursive
+      - name: Invalidate CF caches
+        run: aws cloudfront create-invalidation --distribution-id E2COEEXT6AKFQ5 --paths "/*"
