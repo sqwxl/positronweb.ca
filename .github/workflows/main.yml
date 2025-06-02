@@ -30,6 +30,6 @@ jobs:
       - name: Generate static site
         run: pelican --settings publishconf.py --quiet --output public
       - name: Inject Lambda contact form URL
-        run: sed -i 's|PLACEHOLDER_CONTACT_URL|${{ secrets.CONTACT_ENDPOINT }}|' ./public/contact.html ./public/fr/contact.html
+        run: sed -i 's|PLACEHOLDER_CONTACT_URL|${{ secrets.CONTACT_ENDPOINT }}|' ./public/index.html ./public/fr/index.html
       - name: Upload to S3
         run: aws s3 cp ./public s3://${{ env.BUCKET_NAME }}/ --recursive
