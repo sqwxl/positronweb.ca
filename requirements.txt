@@ -1,2 +1,3 @@
+Babel
 pelican
 pelican-i18n-subsites

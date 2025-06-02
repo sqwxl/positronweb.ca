@@ -1,54 +1,46 @@
-{% extends "base.html" %}
-{% block title %}
-    Contact {{ super() }}
-{% endblock title %}
-{% block header %}
-    <hgroup>
-        <style>
+<hgroup>
+    <style>
             me {
                 img {
                     max-height: 4rem;
                 }
             }
-        </style>
-        <h1>
-            <img src="{{ main_siteurl }}/images/contact/plane.svg">
-            {% trans %}Contact Us{% endtrans %}
-        </h1>
-    </hgroup>
-{% endblock header %}
-{% block content %}
-    <p>
-        <form method="post" action="PLACEHOLDER_CONTACT_URL">
-            <div>
-                <label for="id_name">{% trans %}Name{% endtrans %}</label>
-                <input type="text" name="name" maxlength="100" required id="id_name">
-            </div>
-            <div>
-                <label for="id_email">{% trans %}Email{% endtrans %}</label>
-                <input type="email" name="email" maxlength="320" required id="id_email">
-            </div>
-            <div>
-                <label for="id_number">{% trans %}Phone number (optional){% endtrans %}</label>
-                <input type="tel" name="number" id="id_number">
-            </div>
-            <div>
-                <label for="id_message">Message</label>
-                <textarea name="message"
-                          cols="40"
-                          rows="10"
-                          placeholder="{% trans %}Tell us about your project, your budget and your target launch date. We'll get back to you ASAP.{% endtrans %}"
-                          required
-                          id="id_message"></textarea>
-            </div>
-            <button>
-                <span>{% trans %}Send{% endtrans %}</span>
-            </button>
-        </form>
-        <script>
+    </style>
+    <h1>
+        <img src="{{ main_siteurl }}/images/contact/plane.svg">
+        {% trans %}Contact Us{% endtrans %}
+    </h1>
+</hgroup>
+<p>
+    <form method="post" action="PLACEHOLDER_CONTACT_URL">
+        <div>
+            <label for="id_name">{% trans %}Name{% endtrans %}</label>
+            <input type="text" name="name" maxlength="100" required id="id_name">
+        </div>
+        <div>
+            <label for="id_email">{% trans %}Email{% endtrans %}</label>
+            <input type="email" name="email" maxlength="320" required id="id_email">
+        </div>
+        <div>
+            <label for="id_number">{% trans %}Phone number (optional){% endtrans %}</label>
+            <input type="tel" name="number" id="id_number">
+        </div>
+        <div>
+            <label for="id_message">Message</label>
+            <textarea name="message"
+                      cols="40"
+                      rows="10"
+                      placeholder="{% trans %}Tell us about your project, your budget and your target launch date. We'll get back to you ASAP.{% endtrans %}"
+                      required
+                      id="id_message"></textarea>
+        </div>
+        <button>
+            <span>{% trans %}Send{% endtrans %}</span>
+        </button>
+    </form>
+    <script>
             document.querySelector("form").addEventListener("submit", event => { 
                 event.currentTarget.outerHTML = "<h3>{% trans %}Thank you for your message. We'll be in touch with you shortly.{% endtrans %}</h3>"
             })
-        </script>
-    </p>
-{% endblock content %}
+    </script>
+</p>

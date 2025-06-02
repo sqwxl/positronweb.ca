@@ -461,3 +461,7 @@ input[aria-invalid="true"] {
   max-height: 6rem;
   margin: 1rem;
 }
+
+.hidden {
+  display: none;
+}

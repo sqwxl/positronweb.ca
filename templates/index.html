@@ -1,70 +1,175 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+{% set lang = '' if DEFAULT_LANG == 'en' else 'fr' %}
+{% set other_lang = 'fr' if DEFAULT_LANG == 'en' else '' %}
+<html lang="en">
 
-{% block title %}
-    Positron
-{% endblock title %}
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Positron Web">
+    <meta name="keywords" content="web,development,agency,software,consultant">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="same-origin" />
+    <link rel="preload" href="{{ main_siteurl }}/images/bubble_chamber-666x2048.webp" as="image" type="image/webp" />
+    <link rel="stylesheet" href="{{ main_siteurl }}/stylesheet.css" />
+    <script src="https://cdn.jsdelivr.net/gh/gnat/css-scope-inline@main/script.js">
 
-{% block content %}
-    <p align="center">
-        <a role="button" class="anchor-btn" href="{{ SITEURL }}/contact">
-            {% trans %}Schedule a free consultation{% endtrans %}
+    </script>
+    <title>Positron</title>
+</head>
+
+<body>
+    <header>
+        <style>
+            me {
+                grid-column: 1/-1;
+                padding: 4rem 0 1rem;
+
+                img {
+                    width: 240px;
+                }
+            }
+        </style>
+        <a href="{{ SITEURL }}">
+            <img width="240" height="50" src="{{ main_siteurl }}/images/logo.svg" alt="Positron">
         </a>
-    </p>
-    <ul class="feature-list">
-        <li>
-            <hgroup>
-                <h3>
-                    {% trans %}Speed{% endtrans %}
-                </h3>
-                <img src="{{ main_siteurl }}/images/index/rocket.svg" alt="">
-            </hgroup>
-            <p>
-                {% trans %}Modern websites that are snappy and responsive.{% endtrans %}
-            </p>
-        </li>
-        <li>
-            <hgroup>
-                <img src="{{ main_siteurl }}/images/index/bicep.svg" alt="">
-                <h3>
-                    {% trans %}Stability{% endtrans %}
-                </h3>
-            </hgroup>
-            <p>
-                {% trans %}Built with battle-tested technologies to provide reliable and safe user experiences.{% endtrans %}
-            </p>
-        </li>
-        <li>
-            <hgroup>
-                <h3>
-                    {% trans %}Security{% endtrans %}
-                </h3>
-                <img src="{{ main_siteurl }}/images/index/tower.svg" alt="">
-            </hgroup>
-            <p>
-                {% trans %}Secure by default to keep you and your client's data safe.{% endtrans %}
-            </p>
-        </li>
-        <li>
-            <hgroup>
-                <img src="{{ main_siteurl }}/images/index/a11y.svg" alt="">
-                <h3>
-                    {% trans %}Accessibility{% endtrans %}
-                </h3>
-            </hgroup>
-            <p>
-                {% trans %}Clear, simple and functional designs that are easy to use.{% endtrans %}
-            </p>
-        </li>
-        <li>
-            <hgroup>
-                <h3>
-                    {% trans %}Open Source Tech{% endtrans %}
-                </h3>
-                <img src="{{ main_siteurl }}/images/index/trusted.svg" alt="">
-            </hgroup>
-            <p>
-                {% trans %}Take advantage of trusted, community-driven software{% endtrans %}
-            </p>
-        </li>
-    </ul>
-{% endblock content %}
+        <p align="center">
+            <small id="tagline"></small>
+            <script>
+                var taglines = [
+                    "{% trans %}The web how it was meant to be{% endtrans %}",
+                    "{% trans %}The snippy, snappy subatomic particle{% endtrans %}",
+                    "{% trans %}The web artisans{% endtrans %}",
+                    "{% trans %}Simple, reliable, and fast{% endtrans %}",
+                    "{% trans %}Your new favorite antiparticle{% endtrans %}",
+                    "{% trans %}Where technology meets craftsmanship{% endtrans %}",
+                    "{% trans %}Powered by positronic brains{% endtrans %}",
+                    "{% trans %}Web crafting with a positive spin{% endtrans %}",
+                    "{% trans %}Bit by positronic bit{% endtrans %}",
+                    "{% trans %}Enjoy a warm cup of positronic tea{% endtrans %}",
+                    "{% trans %}Positronic precision in every pixel{% endtrans %}",
+                    "{% trans %}Positive design, positive impact{% endtrans %}",
+                    "{% trans %}The positively powerful positronic web experience{% endtrans %}",
+                    "{% trans %}Infused with positively charged particles{% endtrans %}",
+                    "{% trans %}Thunderstruck by a bolt of positronic lightning{% endtrans %}",
+                    "{% trans %}Artisanal bytes served up on a positronic palette{% endtrans %}",
+                    "{% trans %}Meet the electron's nerdy cousin{% endtrans %}",
+                ];
+
+                document.getElementById("tagline").innerHTML =
+                    taglines[Math.floor(Math.random() * taglines.length)];
+            </script>
+        </p>
+        <nav>
+            <menu>
+                <li>
+                    <a href="{{ SITEURL }}/" data-link>{% trans %}Home{% endtrans %}</a>
+                </li>
+                <li>
+                    <a href="{{ SITEURL }}/services" data-link>{% trans %}Services{% endtrans %}</a>
+                </li>
+                <li>
+                    <a href="{{ SITEURL }}/contact" data-link>{% trans %}Contact{% endtrans %}</a>
+                </li>
+                <li>
+                    <a id="translate" data-link>
+                        <style>
+                            me {
+                                font-size: small;
+                                cursor: pointer;
+                                text-decoration: none;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+
+                                &,
+                                &:visited {
+                                    color: var(--muted);
+                                }
+                            }
+                        </style>
+                        {% trans %}Français{% endtrans %}
+                    </a>
+                </li>
+            </menu>
+        </nav>
+    </header>
+    <main>
+        <style>
+            me {
+                grid-column: 2;
+            }
+        </style>
+        <section id="home">
+            {% include "home.html" %}
+        </section>
+        <section id="services" class="hidden">
+            {% include "services.html" %}
+        </section>
+        <section id="contact" class="hidden">
+            {% include "contact.html" %}
+        </section>
+    </main>
+    <footer>
+        <style>
+            me {
+                grid-column: 1/-1;
+                margin-top: 4rem;
+
+                img {
+                    width: 3rem;
+                }
+            }
+        </style>
+        <p align="center"><small>{% trans %}Copyright Positron 2025{% endtrans %}</small></p>
+    </footer>
+    <script>
+        const currentLang = "{{ lang }}";
+        const otherLang = "{{ other_lang }}";
+        const routes = {
+            "/": "home",
+            "/services": "services",
+            "/contact": "contact",
+            "/fr/": "home",
+            "/fr/services": "services",
+            "/fr/contact": "contact",
+        };
+
+        function getSection() {
+            return location.pathname.replace(/^\/(fr)?\/?/, "") || "";
+        }
+
+        function navigate(path) {
+            console.log(path);
+            history.pushState({}, "", path);
+            render();
+        }
+
+        function render() {
+            const pageId = routes[location.pathname] || "home";
+            document
+                .querySelectorAll("main > section")
+                .forEach((el) => el.classList.toggle("hidden", el.id !== pageId));
+        }
+
+        document.querySelectorAll("a[data-link]").forEach((link) =>
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                let href = link.getAttribute("href");
+
+                if (e.currentTarget.id === "translate") {
+                    section = getSection();
+                    location.href = `${otherLang}/${section}/`.replace(/\/{2,}/, "/");
+                    return;
+                }
+
+                navigate(href);
+            }),
+        );
+
+        window.addEventListener("popstate", render);
+        window.addEventListener("DOMContentLoaded", render);
+    </script>
+</body>
+
+</html>

@@ -13,7 +13,7 @@ JINJA_ENVIRONMENT = {
 }
 I18N_SUBSITES = {"fr": {}}
 
-DIRECT_TEMPLATES = ["index", "services", "contact"]
+DIRECT_TEMPLATES = ["index"]
 
 # Disable feed gen
 FEED_ALL_ATOM = None
