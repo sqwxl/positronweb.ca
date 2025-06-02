@@ -22,6 +22,11 @@ html {
   box-sizing: inherit;
 }
 
+*:focus-visible {
+  outline: cornflowerblue solid 3px;
+  outline-offset: 2px;
+}
+
 h1 + *,
 h2 + *,
 h3 + *,
@@ -124,21 +129,6 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
-}
-
-/**
-Remove the inner border and padding in Firefox.
-*/
-::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-/**
-Restore the focus styles unset by the previous rule.
-*/
-:-moz-focusring {
-  outline: 1px dotted ButtonText;
 }
 
 /**
@@ -388,29 +378,20 @@ input[type="submit"] {
   text-decoration: none;
   padding: 0.5rem 1rem;
   margin: 0.5rem 0;
-}
-.anchor-btn:focus,
-button:focus,
-input[type="submit"]:focus {
-  outline: var(--primary) solid 2px;
-  outline-offset: 2px;
-}
-.anchor-btn:visited,
-button:visited,
-input[type="submit"]:visited {
-  color: var(--background);
-}
-.anchor-btn:hover,
-button:hover,
-input[type="submit"]:hover {
-  filter: opacity(0.9);
-}
-.anchor-btn:disabled,
-button:disabled,
-input[type="submit"]:disabled {
-  background-color: var(--muted);
-  color: var(--foreground);
-  cursor: not-allowed;
+
+  &:visited {
+    color: var(--background);
+  }
+
+  &:hover {
+    filter: opacity(0.9);
+  }
+
+  &:disabled {
+    background-color: var(--muted);
+    color: var(--foreground);
+    cursor: not-allowed;
+  }
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
