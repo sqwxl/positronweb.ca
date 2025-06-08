@@ -2,23 +2,23 @@
 {% set lang = '' if DEFAULT_LANG == 'en' else 'fr' %}
 {% set other_lang = 'fr' if DEFAULT_LANG == 'en' else '' %}
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="description" content="Positron Web">
-    <meta name="keywords" content="web,development,agency,software,consultant">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="referrer" content="same-origin">
-    <link rel="preload" href="{{ main_siteurl }}/images/bubble_chamber-666x2048.webp" as="image" type="image/webp">
-    <link rel="stylesheet" href="{{ main_siteurl }}/stylesheet.css">
-    <script src="https://cdn.jsdelivr.net/gh/gnat/css-scope-inline@main/script.js">
-    </script>
-    <title>Positron</title>
-</head>
-
-<body>
-    <header>
-        <style>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Positron Web">
+        <meta name="keywords" content="web,development,agency,software,consultant">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="referrer" content="same-origin">
+        <link rel="preload"
+              href="{{ main_siteurl }}/images/bubble_chamber-666x2048.webp"
+              as="image"
+              type="image/webp">
+        <link rel="stylesheet" href="{{ main_siteurl }}/stylesheet.css">
+        <script src="https://cdn.jsdelivr.net/gh/gnat/css-scope-inline@main/script.js"></script>
+        <title>Positron</title>
+    </head>
+    <body>
+        <header>
+            <style>
             me {
                 grid-column: 1/-1;
                 padding: 4rem 0 1rem;
@@ -27,27 +27,30 @@
                     width: 240px;
                 }
             }
-        </style>
-        <a href="{{ SITEURL }}">
-            <img width="240" height="50" src="{{ main_siteurl }}/images/logo.svg" alt="Positron">
-        </a>
-        <p align="center">
-            <small id="tagline"></small>
-        </p>
-        <nav>
-            <menu>
-                <li>
-                    <a href="/" data-link>{% trans %}Home{% endtrans %}</a>
-                </li>
-                <li>
-                    <a href="/services" data-link>{% trans %}Services{% endtrans %}</a>
-                </li>
-                <li>
-                    <a href="/contact" data-link>{% trans %}Contact{% endtrans %}</a>
-                </li>
-                <li>
-                    <a id="translate" data-link>
-                        <style>
+            </style>
+            <a href="{{ SITEURL }}">
+                <img width="240"
+                     height="50"
+                     src="{{ main_siteurl }}/images/logo.svg"
+                     alt="Positron">
+            </a>
+            <p align="center">
+                <small id="tagline"></small>
+            </p>
+            <nav>
+                <menu>
+                    <li>
+                        <a href="/" data-link>{% trans %}Home{% endtrans %}</a>
+                    </li>
+                    <li>
+                        <a href="/services" data-link>{% trans %}Services{% endtrans %}</a>
+                    </li>
+                    <li>
+                        <a href="/contact" data-link>{% trans %}Contact{% endtrans %}</a>
+                    </li>
+                    <li>
+                        <a id="translate" data-link>
+                            <style>
                             me {
                                 font-size: small;
                                 cursor: pointer;
@@ -62,43 +65,41 @@
                                     color: var(--muted);
                                 }
                             }
-                        </style>
-                        {% trans %}Français{% endtrans %}
-                    </a>
-                </li>
-            </menu>
-        </nav>
-    </header>
-    <main>
-        <style>
+                            </style>
+                            {% trans %}Français{% endtrans %}
+                        </a>
+                    </li>
+                </menu>
+            </nav>
+        </header>
+        <main>
+            <style>
             me {
                 grid-column: 2;
             }
-        </style>
-        <section id="home">
-            {% include "home.html" %}
-        </section>
-        <section id="services" class="hidden">
-            {% include "services.html" %}
-        </section>
-        <section id="contact" class="hidden">
-            {% include "contact.html" %}
-        </section>
-    </main>
-    <footer>
-        <style>
+            </style>
+            <section id="home">
+                {% include "home.html" %}
+            </section>
+            <section id="services" class="hidden">
+                {% include "services.html" %}
+            </section>
+            <section id="contact" class="hidden">
+                {% include "contact.html" %}
+            </section>
+        </main>
+        <footer>
+            <style>
             me {
                 grid-column: 1/-1;
                 margin-top: 4rem;
-
-                img {
-                    width: 3rem;
-                }
             }
-        </style>
-        <p align="center"><small>{% trans %}Copyright Positron 2025{% endtrans %}</small></p>
-    </footer>
-    <script>
+            </style>
+            <p align="center">
+                <small>{% trans %}Copyright Positron 2025{% endtrans %}</small>
+            </p>
+        </footer>
+        <script>
         const taglines = [
             "{% trans %}The snippy, snappy subatomic particle{% endtrans %}",
             "{% trans %}The web artisans{% endtrans %}",
@@ -172,7 +173,6 @@
 
         window.addEventListener("popstate", render);
         window.addEventListener("DOMContentLoaded", render);
-    </script>
-</body>
-
+        </script>
+    </body>
 </html>

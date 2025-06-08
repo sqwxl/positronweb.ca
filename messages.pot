@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-06-02 14:52-0400\n"
+"POT-Creation-Date: 2025-06-08 18:51-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,160 +33,156 @@ msgstr ""
 msgid "Phone number (optional)"
 msgstr ""
 
-#: templates/contact.html:31
+#: templates/contact.html:33
 msgid ""
 "Tell us about your project, your budget and your target launch date. "
 "We'll get back to you ASAP."
 msgstr ""
 
-#: templates/contact.html:35
+#: templates/contact.html:37
 msgid "Send"
 msgstr ""
 
-#: templates/contact.html:52
-msgid "Thank you for your message."
+#: templates/contact.html:53
+msgid "Thank you for your message!"
 msgstr ""
 
-#: templates/contact.html:52
+#: templates/contact.html:53
 msgid "We'll be in touch with you shortly."
 msgstr ""
 
-#: templates/contact.html:54
+#: templates/contact.html:55
 msgid "Something went wrong. Please try again."
 msgstr ""
 
-#: templates/home.html:3
-msgid "Schedule a free consultation"
-msgstr ""
-
-#: templates/home.html:9
+#: templates/home.html:4
 msgid "Speed"
 msgstr ""
 
-#: templates/home.html:12
-msgid "Modern websites that are snappy and responsive."
+#: templates/home.html:7
+msgid "Websites that are snappy and responsive"
 msgstr ""
 
-#: templates/home.html:17
+#: templates/home.html:12
 msgid "Stability"
 msgstr ""
 
-#: templates/home.html:19
+#: templates/home.html:14
 msgid ""
 "Built with battle-tested technologies to provide reliable and safe user "
-"experiences."
+"experiences"
 msgstr ""
 
-#: templates/home.html:23
+#: templates/home.html:18
 msgid "Security"
 msgstr ""
 
-#: templates/home.html:26
-msgid "Secure by default to keep you and your client's data safe."
+#: templates/home.html:21
+msgid "Secure by default to keep you and your client's data safe"
 msgstr ""
 
-#: templates/home.html:31
+#: templates/home.html:26
 msgid "Accessibility"
 msgstr ""
 
-#: templates/home.html:33
-msgid "Clear, simple and functional designs that are easy to use."
+#: templates/home.html:28
+msgid "Clear, simple and easy-to-use designs"
 msgstr ""
 
-#: templates/home.html:37
+#: templates/home.html:32
 msgid "Open Source Tech"
 msgstr ""
 
+#: templates/home.html:35
+msgid "Open tech is better tech"
+msgstr ""
+
 #: templates/home.html:40
-msgid "Take advantage of trusted, community-driven software"
-msgstr ""
-
-#: templates/index.html:39
-msgid "The web how it was meant to be"
-msgstr ""
-
-#: templates/index.html:40
-msgid "The snippy, snappy subatomic particle"
-msgstr ""
-
-#: templates/index.html:41
-msgid "The web artisans"
-msgstr ""
-
-#: templates/index.html:42
-msgid "Simple, reliable, and fast"
+msgid "Schedule a free consultation"
 msgstr ""
 
 #: templates/index.html:43
-msgid "Your new favorite antiparticle"
-msgstr ""
-
-#: templates/index.html:44
-msgid "Where technology meets craftsmanship"
-msgstr ""
-
-#: templates/index.html:45
-msgid "Powered by positronic brains"
-msgstr ""
-
-#: templates/index.html:46
-msgid "Web crafting with a positive spin"
-msgstr ""
-
-#: templates/index.html:47
-msgid "Bit by positronic bit"
-msgstr ""
-
-#: templates/index.html:48
-msgid "Enjoy a warm cup of positronic tea"
-msgstr ""
-
-#: templates/index.html:49
-msgid "Positronic precision in every pixel"
-msgstr ""
-
-#: templates/index.html:50
-msgid "Positive design, positive impact"
-msgstr ""
-
-#: templates/index.html:51
-msgid "The positively powerful positronic web experience"
-msgstr ""
-
-#: templates/index.html:52
-msgid "Infused with positively charged particles"
-msgstr ""
-
-#: templates/index.html:53
-msgid "Thunderstruck by a bolt of positronic lightning"
-msgstr ""
-
-#: templates/index.html:54
-msgid "Artisanal bytes served up on a positronic palette"
-msgstr ""
-
-#: templates/index.html:55
-msgid "Meet the electron's nerdy cousin"
-msgstr ""
-
-#: templates/index.html:65
 msgid "Home"
 msgstr ""
 
-#: templates/index.html:68
+#: templates/index.html:46
 msgid "Services"
 msgstr ""
 
-#: templates/index.html:71
+#: templates/index.html:49
 msgid "Contact"
 msgstr ""
 
-#: templates/index.html:91
+#: templates/index.html:69
 msgid "Français"
 msgstr ""
 
-#: templates/index.html:124
+#: templates/index.html:99
 msgid "Copyright Positron 2025"
+msgstr ""
+
+#: templates/index.html:104
+msgid "The snippy, snappy subatomic particle"
+msgstr ""
+
+#: templates/index.html:105
+msgid "The web artisans"
+msgstr ""
+
+#: templates/index.html:106
+msgid "Simple, reliable, and fast"
+msgstr ""
+
+#: templates/index.html:107
+msgid "Your new favorite antiparticle"
+msgstr ""
+
+#: templates/index.html:108
+msgid "Where technology meets craftsmanship"
+msgstr ""
+
+#: templates/index.html:109
+msgid "Powered by positronic brains"
+msgstr ""
+
+#: templates/index.html:110
+msgid "Web crafting with a positive spin"
+msgstr ""
+
+#: templates/index.html:111
+msgid "Bit by positronic bit"
+msgstr ""
+
+#: templates/index.html:112
+msgid "Enjoy a warm cup of positronic tea"
+msgstr ""
+
+#: templates/index.html:113
+msgid "Positronic precision in every pixel"
+msgstr ""
+
+#: templates/index.html:114
+msgid "Positive design, positive impact"
+msgstr ""
+
+#: templates/index.html:115
+msgid "The positively powerful positronic web experience"
+msgstr ""
+
+#: templates/index.html:116
+msgid "Infused with positively charged particles"
+msgstr ""
+
+#: templates/index.html:117
+msgid "Thunderstruck by a bolt of positronic lightning"
+msgstr ""
+
+#: templates/index.html:118
+msgid "Artisanal bytes served up on a positronic palette"
+msgstr ""
+
+#: templates/index.html:119
+msgid "Meet the electron's nerdy cousin"
 msgstr ""
 
 #: templates/services.html:5
@@ -196,7 +192,7 @@ msgstr ""
 #: templates/services.html:8
 msgid ""
 "Whether you need a website to present your business, an artist's "
-"portofolio or a complex project with a custom design, we can help you."
+"portofolio or a complex project with a custom design, we can help."
 msgstr ""
 
 #: templates/services.html:13
@@ -206,7 +202,7 @@ msgstr ""
 #: templates/services.html:17
 msgid ""
 "Mobile apps for iOS & Android as well as cross-platform apps for Windows,"
-" MacOS and Linux."
+" MacOS and Linux"
 msgstr ""
 
 #: templates/services.html:23
@@ -227,7 +223,7 @@ msgstr ""
 msgid "We can build custom software solutions tailored to your specific needs."
 msgstr ""
 
-#: templates/services.html:37
+#: templates/services.html:39
 msgid "Tell us about your project!"
 msgstr ""
 

@@ -2,6 +2,9 @@ AUTHOR = "Positron"
 SITENAME = "Positron"
 TIMEZONE = "America/Montreal"
 
+IGNORE_FILES = ["**/.*", "infra", "__pycache__", "README.md"]
+TEMPLATE_EXTENSIONS = [".html"]
+
 SITEURL = ""
 
 THEME = "."
