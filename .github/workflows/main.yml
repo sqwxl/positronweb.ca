@@ -2,8 +2,6 @@ name: Publish
 on:
   push
 env:
-  BUCKET_NAME: positronweb.ca
-  AWS_REGION: us-east-1
 permissions:
   id-token: write
   contents: read
@@ -16,8 +14,8 @@ jobs:
       - name: Configure aws credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::036657713000:role/PositronGitHubRole
-          aws-region: ${{ env.AWS_REGION }}
+          role-to-assume: ${{ secrets.OIDC_GITHUB_ROLE }}
+          aws-region: us_east_1
       - name: Setup python
         uses: actions/setup-python@v5
         with:
@@ -32,6 +30,8 @@ jobs:
       - name: Inject Lambda contact form URL
         run: sed -i 's|PLACEHOLDER_CONTACT_URL|${{ secrets.CONTACT_ENDPOINT }}|' ./public/index.html ./public/fr/index.html
       - name: Upload to S3
-        run: aws s3 cp ./public s3://${{ env.BUCKET_NAME }}/ --recursive
+        run: aws s3 cp ./public s3://positronweb.ca/ --recursive
       - name: Invalidate CF caches
-        run: aws cloudfront create-invalidation --distribution-id E2COEEXT6AKFQ5 --paths "/*"
+        env:
+          DISTRIBUTION_ID: ${{ secrets.DISTRIBUTION_ID }}
+        run: aws cloudfront create-invalidation --distribution-id "$DISTRIBUTION_ID" --paths "/*"
