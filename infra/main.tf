@@ -19,6 +19,28 @@ resource "aws_s3_bucket" "bucket" {
   bucket = "positronweb.ca"
 }
 
+resource "aws_s3_bucket_public_access_block" "allow" {
+  bucket = aws_s3_bucket.bucket.id
+
+  block_public_acls       = false
+  block_public_policy     = false
+  ignore_public_acls      = false
+  restrict_public_buckets = false
+}
+
+resource "aws_s3_bucket_policy" "policy" {
+  bucket = aws_s3_bucket.bucket.id
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [{
+      Effect    = "Allow"
+      Principal = "*"
+      Action    = ["s3:GetObject"]
+      Resource : ["${aws_s3_bucket.bucket.arn}/*"]
+    }]
+  })
+}
+
 resource "aws_s3_bucket_website_configuration" "static_site" {
   bucket = aws_s3_bucket.bucket.bucket
   error_document {
@@ -185,7 +207,7 @@ locals {
 
 resource "aws_cloudfront_distribution" "s3_distribution" {
   origin {
-    domain_name = aws_s3_bucket_website_configuration.static_site.website_domain
+    domain_name = aws_s3_bucket_website_configuration.static_site.website_endpoint
     origin_id   = local.cf_origin_name
     custom_origin_config {
       http_port                = 80

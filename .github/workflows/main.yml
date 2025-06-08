@@ -1,6 +1,12 @@
 name: Publish
 on:
-  push
+  push:
+    paths:
+      - templates/**
+      - translations/**
+      - pelicanconf.py
+      - publishconf.py
+      - requirements.txt
 env:
   DISTRIBUTION_ID: ${{ secrets.DISTRIBUTION_ID }}
   CONTACT_ENDPOINT: ${{ secrets.CONTACT_ENDPOINT }}
