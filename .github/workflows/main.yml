@@ -2,6 +2,8 @@ name: Publish
 on:
   push
 env:
+  DISTRIBUTION_ID: ${{ secrets.DISTRIBUTION_ID }}
+  CONTACT_ENDPOINT: ${{ secrets.CONTACT_ENDPOINT }}
 permissions:
   id-token: write
   contents: read
@@ -15,7 +17,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.OIDC_GITHUB_ROLE }}
-          aws-region: us_east_1
+          aws-region: us-east-1
       - name: Setup python
         uses: actions/setup-python@v5
         with:
@@ -28,10 +30,8 @@ jobs:
       - name: Generate static site
         run: pelican --settings publishconf.py --quiet --output public
       - name: Inject Lambda contact form URL
-        run: sed -i 's|PLACEHOLDER_CONTACT_URL|${{ secrets.CONTACT_ENDPOINT }}|' ./public/index.html ./public/fr/index.html
+        run: sed -i "s|PLACEHOLDER_CONTACT_URL|$CONTACT_ENDPOINT|" ./public/index.html ./public/fr/index.html
       - name: Upload to S3
         run: aws s3 cp ./public s3://positronweb.ca/ --recursive
       - name: Invalidate CF caches
-        env:
-          DISTRIBUTION_ID: ${{ secrets.DISTRIBUTION_ID }}
         run: aws cloudfront create-invalidation --distribution-id "$DISTRIBUTION_ID" --paths "/*"
